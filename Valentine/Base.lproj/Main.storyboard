@@ -27,25 +27,34 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="03h-38-iV7">
-                                        <rect key="frame" x="8" y="61" width="584" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22t-Gd-nbJ">
+                                        <rect key="frame" x="279" y="48" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" name="IowanOldStyle-Italic" family="Iowan Old Style" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="03h-38-iV7">
+                                        <rect key="frame" x="8" y="71" width="584" height="32"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLQ-xS-1Qf">
-                                                <rect key="frame" x="0.0" y="0.0" width="195" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLQ-xS-1Qf">
+                                                <rect key="frame" x="0.0" y="0.0" width="195" height="32"/>
+                                                <fontDescription key="fontDescription" name="IowanOldStyle-Bold" family="Iowan Old Style" pointSize="14"/>
                                                 <state key="normal" title="&lt;&lt;"/>
                                                 <connections>
                                                     <action selector="prevPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="roz-2E-gi0"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjd-og-EWb">
-                                                <rect key="frame" x="195" y="0.0" width="194" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjd-og-EWb">
+                                                <rect key="frame" x="195" y="0.0" width="194" height="32"/>
+                                                <fontDescription key="fontDescription" name="IowanOldStyle-Bold" family="Iowan Old Style" pointSize="14"/>
                                                 <state key="normal" title="||"/>
                                                 <connections>
                                                     <action selector="playPausePressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="zel-sE-chE"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of6-yG-cIn">
-                                                <rect key="frame" x="389" y="0.0" width="195" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of6-yG-cIn">
+                                                <rect key="frame" x="389" y="0.0" width="195" height="32"/>
+                                                <fontDescription key="fontDescription" name="IowanOldStyle-Bold" family="Iowan Old Style" pointSize="14"/>
                                                 <state key="normal" title="&gt;&gt;"/>
                                                 <connections>
                                                     <action selector="nextPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="VDc-Jn-2wk"/>
@@ -58,23 +67,79 @@
                                 <constraints>
                                     <constraint firstItem="SuG-eY-QE8" firstAttribute="top" secondItem="snv-Fr-d5A" secondAttribute="top" constant="25" id="11k-5P-sPL"/>
                                     <constraint firstItem="03h-38-iV7" firstAttribute="leading" secondItem="snv-Fr-d5A" secondAttribute="leadingMargin" id="IeN-cN-w8Y"/>
-                                    <constraint firstItem="03h-38-iV7" firstAttribute="top" secondItem="SuG-eY-QE8" secondAttribute="bottom" constant="15" id="Xoe-sp-KAu"/>
+                                    <constraint firstItem="03h-38-iV7" firstAttribute="top" secondItem="SuG-eY-QE8" secondAttribute="bottom" constant="25" id="Xoe-sp-KAu"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="03h-38-iV7" secondAttribute="trailing" id="ed0-hQ-gBD"/>
+                                    <constraint firstItem="22t-Gd-nbJ" firstAttribute="centerX" secondItem="snv-Fr-d5A" secondAttribute="centerX" id="hMd-Iz-For"/>
+                                    <constraint firstItem="22t-Gd-nbJ" firstAttribute="top" secondItem="SuG-eY-QE8" secondAttribute="bottom" constant="2" id="hQp-e7-f3w"/>
                                     <constraint firstItem="SuG-eY-QE8" firstAttribute="centerX" secondItem="snv-Fr-d5A" secondAttribute="centerX" id="r6w-M3-DYC"/>
                                     <constraint firstAttribute="height" constant="120" id="vET-Cr-24x"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kbp-HM-PGY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kbp-HM-PGY">
                                 <rect key="frame" x="0.0" y="104" width="600" height="319"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MSE-z7-3ey">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="68" id="MSE-z7-3ey" customClass="SongCell" customModule="Valentine" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MSE-z7-3ey" id="4V6-nh-Uu8">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPQ-LO-WDm">
+                                                    <rect key="frame" x="54" y="8" width="494" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="494" id="BDo-fh-abB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="IowanOldStyle-Bold" family="Iowan Old Style" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="BDo-fh-abB"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcs-Bi-V02">
+                                                    <rect key="frame" x="54" y="38" width="494" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="494" id="CMo-Ux-F1l"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="IowanOldStyle-Italic" family="Iowan Old Style" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="CMo-Ux-F1l"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Kcs-Bi-V02" firstAttribute="leading" secondItem="4V6-nh-Uu8" secondAttribute="leadingMargin" constant="46" id="9wl-at-oRn"/>
+                                                <constraint firstItem="Kcs-Bi-V02" firstAttribute="top" secondItem="qPQ-LO-WDm" secondAttribute="bottom" constant="10" id="FWV-8r-d66"/>
+                                                <constraint firstItem="qPQ-LO-WDm" firstAttribute="centerX" secondItem="4V6-nh-Uu8" secondAttribute="centerX" id="K4N-bB-NJd"/>
+                                                <constraint firstItem="qPQ-LO-WDm" firstAttribute="top" secondItem="4V6-nh-Uu8" secondAttribute="topMargin" id="MGE-6w-F1t"/>
+                                                <constraint firstItem="Kcs-Bi-V02" firstAttribute="top" secondItem="qPQ-LO-WDm" secondAttribute="bottom" constant="9" id="Me3-R8-RHp"/>
+                                                <constraint firstItem="Kcs-Bi-V02" firstAttribute="centerX" secondItem="4V6-nh-Uu8" secondAttribute="centerX" id="ZVt-uY-VuO"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qPQ-LO-WDm" secondAttribute="trailing" constant="46" id="cYG-zt-zmR"/>
+                                                <constraint firstItem="qPQ-LO-WDm" firstAttribute="leading" secondItem="4V6-nh-Uu8" secondAttribute="leadingMargin" constant="46" id="gfu-67-dwe"/>
+                                                <constraint firstItem="Kcs-Bi-V02" firstAttribute="leading" secondItem="qPQ-LO-WDm" secondAttribute="leading" id="tPz-oZ-vU0"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Kcs-Bi-V02" secondAttribute="trailing" constant="46" id="vDW-9H-3u5"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="K4N-bB-NJd"/>
+                                                    <exclude reference="FWV-8r-d66"/>
+                                                    <exclude reference="ZVt-uY-VuO"/>
+                                                    <exclude reference="tPz-oZ-vU0"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistLbl" destination="Kcs-Bi-V02" id="Ul8-f4-d2w"/>
+                                            <outlet property="titleLbl" destination="qPQ-LO-WDm" id="NFN-fM-TsF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -102,7 +167,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Our Songs" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="currentArtistLbl" destination="22t-Gd-nbJ" id="Jm5-E6-mjs"/>
                         <outlet property="currentSongLbl" destination="SuG-eY-QE8" id="Dxd-JL-ql6"/>
+                        <outlet property="tableView" destination="Kbp-HM-PGY" id="PGE-Jx-TKk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

@@ -17,6 +17,7 @@
 		01E20D271C5BFC46009BD168 /* youandi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E20D261C5BFC46009BD168 /* youandi.mp3 */; };
 		01E20D291C5BFCE2009BD168 /* anywherewithyou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E20D281C5BFCE2009BD168 /* anywherewithyou.mp3 */; };
 		01E20D2B1C5BFDBA009BD168 /* yourman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E20D2A1C5BFDBA009BD168 /* yourman.mp3 */; };
+		01E20D2F1C5C058D009BD168 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E20D2E1C5C058D009BD168 /* SongCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		01E20D261C5BFC46009BD168 /* youandi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = youandi.mp3; sourceTree = "<group>"; };
 		01E20D281C5BFCE2009BD168 /* anywherewithyou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = anywherewithyou.mp3; sourceTree = "<group>"; };
 		01E20D2A1C5BFDBA009BD168 /* yourman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yourman.mp3; sourceTree = "<group>"; };
+		01E20D2E1C5C058D009BD168 /* SongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		01E20D2D1C5C0521009BD168 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				01E20D2E1C5C058D009BD168 /* SongCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E20D2F1C5C058D009BD168 /* SongCell.swift in Sources */,
 				01E20D141C59D7A6009BD168 /* SecondViewController.swift in Sources */,
 				01E20D101C59D7A6009BD168 /* AppDelegate.swift in Sources */,
 				01E20D121C59D7A6009BD168 /* FirstViewController.swift in Sources */,

@@ -30,12 +30,21 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         playSong(songs[songCounter]["filename"]!)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        // @TODO
-        return UITableViewCell()
+
+        if let cell = tableView.dequeueReusableCellWithIdentifier("SongCell") as? SongCell {
+            cell.configureCell(songs[indexPath.row]["name"]!, artist: songs[indexPath.row]["artist"]!)
+            return cell
+        } else {
+            return SongCell()
+        }
+        
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -66,13 +75,14 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
             musicPlayer.numberOfLoops = 1
             musicPlayer.play()
             currentSongLbl.text = songs[songCounter]["name"]!
+            currentArtistLbl.text = songs[songCounter]["artist"]!
         } catch let err as NSError {
             currentSongLbl.text = "Oops... something went wrong"
             print(err.debugDescription)
         }
     }
 
-    @IBAction func nextPressed(sender: UIButton) {
+    @IBAction func nextPressed(sender: AnyObject) {
         songCounter++
         songCounter %= songs.count
         musicPlayer.stop()
@@ -86,14 +96,15 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
             songCounter = songs.count - 1
         }
         musicPlayer.stop()
-        print(songCounter)
         playSong(songs[songCounter]["filename"]!)
     }
 
-    @IBAction func playPausePressed(sender: AnyObject) {
+    @IBAction func playPausePressed(sender: UIButton) {
         if musicPlayer.playing {
+            sender.setTitle("►", forState: .Normal)
             musicPlayer.stop()
         } else {
+            sender.setTitle("||", forState: .Normal)
             musicPlayer.play()
         }
     }
