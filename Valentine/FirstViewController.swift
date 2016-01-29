@@ -13,7 +13,7 @@ class FirstViewController: UIViewController {
     
     var songCounter = 0
     var musicPlayer: AVAudioPlayer!
-    var songs = ["cruise"]
+    var songs = ["cruise","youandi"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +41,13 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func nextPressed(sender: UIButton) {
+        songCounter++
+        songCounter %= songs.count
+        musicPlayer.stop()
+        print(songCounter)
+        playSong(songs[songCounter])
+    }
 
 }
 
