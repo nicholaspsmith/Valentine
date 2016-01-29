@@ -64,10 +64,10 @@
 		01E20D0E1C59D7A6009BD168 /* Valentine */ = {
 			isa = PBXGroup;
 			children = (
+				01E20D2D1C5C0521009BD168 /* View */,
+				01E20D2C1C5C0507009BD168 /* Controller */,
 				01E20D231C5BF78E009BD168 /* Resources */,
 				01E20D0F1C59D7A6009BD168 /* AppDelegate.swift */,
-				01E20D111C59D7A6009BD168 /* FirstViewController.swift */,
-				01E20D131C59D7A6009BD168 /* SecondViewController.swift */,
 				01E20D151C59D7A6009BD168 /* Main.storyboard */,
 				01E20D181C59D7A6009BD168 /* Assets.xcassets */,
 				01E20D1A1C59D7A6009BD168 /* LaunchScreen.storyboard */,
@@ -85,6 +85,22 @@
 				01E20D2A1C5BFDBA009BD168 /* yourman.mp3 */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		01E20D2C1C5C0507009BD168 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				01E20D111C59D7A6009BD168 /* FirstViewController.swift */,
+				01E20D131C59D7A6009BD168 /* SecondViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		01E20D2D1C5C0521009BD168 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
