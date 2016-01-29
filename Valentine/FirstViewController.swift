@@ -11,9 +11,12 @@ import AVFoundation
 
 class FirstViewController: UIViewController {
     
+    @IBOutlet weak var currentSongLbl: UILabel!
+    
     var songCounter = 0
     var musicPlayer: AVAudioPlayer!
-    var songs = ["cruise","youandi"]
+    var songs = ["cruise","youandi","anywherewithyou","yourman"]
+    var songNames = ["Cruise", "You and I", "Anywhere With You", "Your Man"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +33,9 @@ class FirstViewController: UIViewController {
             musicPlayer.prepareToPlay()
             musicPlayer.numberOfLoops = 1
             musicPlayer.play()
+            currentSongLbl.text = songNames[songCounter]
         } catch let err as NSError {
+            currentSongLbl.text = "Oops... something went wrong"
             print(err.debugDescription)
         }
     }
@@ -45,9 +50,21 @@ class FirstViewController: UIViewController {
         songCounter++
         songCounter %= songs.count
         musicPlayer.stop()
-        print(songCounter)
+        playSong(songs[songCounter])
+    }
+    @IBAction func prevPressed(sender: AnyObject) {
+        songCounter--
+        songCounter %= songs.count
+        musicPlayer.stop()
         playSong(songs[songCounter])
     }
 
+    @IBAction func playPausePressed(sender: AnyObject) {
+        if musicPlayer.playing {
+            musicPlayer.stop()
+        } else {
+            musicPlayer.play()
+        }
+    }
 }
 

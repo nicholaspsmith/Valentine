@@ -15,6 +15,8 @@
 		01E20D1C1C59D7A6009BD168 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E20D1A1C59D7A6009BD168 /* LaunchScreen.storyboard */; };
 		01E20D251C5BF799009BD168 /* cruise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E20D241C5BF799009BD168 /* cruise.mp3 */; };
 		01E20D271C5BFC46009BD168 /* youandi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E20D261C5BFC46009BD168 /* youandi.mp3 */; };
+		01E20D291C5BFCE2009BD168 /* anywherewithyou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E20D281C5BFCE2009BD168 /* anywherewithyou.mp3 */; };
+		01E20D2B1C5BFDBA009BD168 /* yourman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E20D2A1C5BFDBA009BD168 /* yourman.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		01E20D1D1C59D7A6009BD168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01E20D241C5BF799009BD168 /* cruise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cruise.mp3; sourceTree = "<group>"; };
 		01E20D261C5BFC46009BD168 /* youandi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = youandi.mp3; sourceTree = "<group>"; };
+		01E20D281C5BFCE2009BD168 /* anywherewithyou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = anywherewithyou.mp3; sourceTree = "<group>"; };
+		01E20D2A1C5BFDBA009BD168 /* yourman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yourman.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			children = (
 				01E20D261C5BFC46009BD168 /* youandi.mp3 */,
 				01E20D241C5BF799009BD168 /* cruise.mp3 */,
+				01E20D281C5BFCE2009BD168 /* anywherewithyou.mp3 */,
+				01E20D2A1C5BFDBA009BD168 /* yourman.mp3 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -140,6 +146,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				01E20D1C1C59D7A6009BD168 /* LaunchScreen.storyboard in Resources */,
+				01E20D2B1C5BFDBA009BD168 /* yourman.mp3 in Resources */,
+				01E20D291C5BFCE2009BD168 /* anywherewithyou.mp3 in Resources */,
 				01E20D271C5BFC46009BD168 /* youandi.mp3 in Resources */,
 				01E20D191C59D7A6009BD168 /* Assets.xcassets in Resources */,
 				01E20D171C59D7A6009BD168 /* Main.storyboard in Resources */,
