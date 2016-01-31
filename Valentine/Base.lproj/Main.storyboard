@@ -315,6 +315,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gifts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ork-VP-f9e">
+                                <rect key="frame" x="215" y="14" width="171" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="9nK-sv-x9k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="22"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N0g-uV-nwH">
+                                <rect key="frame" x="179" y="43" width="240" height="1"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="SUm-AO-HT2"/>
+                                    <constraint firstAttribute="height" constant="1" id="YMk-Sj-wXR"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.55000000000000004" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XJb-gc-XKL">
                                 <rect key="frame" x="20" y="117" width="560" height="410"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -332,18 +349,38 @@
                                             <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Tz-sW-K47">
-                                                    <rect key="frame" x="0.0" y="0.0" width="113" height="88"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee" translatesAutoresizingMaskIntoConstraints="NO" id="0Tz-sW-K47">
+                                                    <rect key="frame" x="0.0" y="0.0" width="113" height="68"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="68" id="3ft-rH-0jT"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXb-jT-PtE">
-                                                    <rect key="frame" x="35" y="92" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 Coffee Date for 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="aXb-jT-PtE">
+                                                    <rect key="frame" x="0.0" y="76" width="113" height="37"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="aXb-jT-PtE" secondAttribute="trailing" constant="5" id="1dm-HJ-pA7"/>
+                                            <constraint firstItem="aXb-jT-PtE" firstAttribute="top" secondItem="0Tz-sW-K47" secondAttribute="bottom" id="JUp-GL-aJD"/>
+                                            <constraint firstItem="aXb-jT-PtE" firstAttribute="leading" secondItem="koO-OP-rxB" secondAttribute="leading" constant="5" id="UdX-zk-HD9"/>
+                                            <constraint firstItem="0Tz-sW-K47" firstAttribute="top" secondItem="koO-OP-rxB" secondAttribute="top" id="c0X-vU-ZyG"/>
+                                            <constraint firstItem="aXb-jT-PtE" firstAttribute="top" secondItem="0Tz-sW-K47" secondAttribute="bottom" id="daK-dd-KEc"/>
+                                            <constraint firstAttribute="trailing" secondItem="0Tz-sW-K47" secondAttribute="trailing" id="gTM-Ul-uYL"/>
+                                            <constraint firstItem="0Tz-sW-K47" firstAttribute="leading" secondItem="koO-OP-rxB" secondAttribute="leading" id="jDW-Ik-ZyQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="aXb-jT-PtE" secondAttribute="bottom" id="tqo-2p-d8J"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="JUp-GL-aJD"/>
+                                                <exclude reference="daK-dd-KEc"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <outlet property="giftNameLbl" destination="aXb-jT-PtE" id="wyl-1s-HFT"/>
                                             <outlet property="thumbImg" destination="0Tz-sW-K47" id="i4I-Ir-OQx"/>
@@ -351,23 +388,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N0g-uV-nwH">
-                                <rect key="frame" x="179" y="43" width="240" height="1"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="SUm-AO-HT2"/>
-                                    <constraint firstAttribute="height" constant="1" id="YMk-Sj-wXR"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gifts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ork-VP-f9e">
-                                <rect key="frame" x="215" y="14" width="171" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="171" id="9nK-sv-x9k"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="22"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.75631876689999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -421,6 +441,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="coffee" width="700" height="466"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>

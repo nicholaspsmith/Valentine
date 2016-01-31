@@ -13,11 +13,11 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBOutlet weak var collection: UICollectionView!
     
     var gifts = [
-        ["name":"1 Pair of Ray Bans","image":"raybansLogo"],
-        ["name":"1 Bottle of Perfume","image":""],
-        ["name":"1 Foot Rub","image":""],
-        ["name":"1 Fancy Dinner","image":""],
-        ["name":"1 Coffee Date","image":""]
+        ["name":"1 Pair of Ray Bans","image":"raybanLogo"],
+        ["name":"1 Bottle of Perfume","image":"perfume"],
+        ["name":"1 Foot Rub","image":"foot_massage"],
+        ["name":"1 Fancy Dinner","image":"dinner"],
+        ["name":"1 Coffee Date","image":"coffee"]
     ]
 
     override func viewDidLoad() {
