@@ -12,12 +12,32 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     @IBOutlet weak var collection: UICollectionView!
     
-    var gifts = [
-        ["name":"1 Pair of Ray Bans","image":"raybanLogo"],
-        ["name":"1 Bottle of Perfume","image":"perfume"],
-        ["name":"1 Foot Rub","image":"foot_massage"],
-        ["name":"1 Fancy Dinner","image":"dinner"],
-        ["name":"1 Coffee Date","image":"coffee"]
+    var gifts: [[String:String]] = [
+        [
+            "name":"1 Pair of Ray Bans",
+            "detail":"I will buy you any pair of Ray Bans that you like",
+            "image":"raybanLogo"
+        ],
+        [
+            "name":"1 Bottle of Perfume",
+            "detail":"I will buy you that perfume that you want but can't seem to remember the name of",
+            "image":"perfume"
+        ],
+        [
+            "name":"1 Foot Rub",
+            "detail":"I will give you a 2 minute foot rub with my full attention at any time of your choosing",
+            "image":"foot_massage"
+        ],
+        [
+            "name":"1 Fancy Dinner",
+            "detail":"I will take you out to a fancy dinner to a restaurant of your choice",
+            "image":"dinner"
+        ],
+        [
+            "name":"1 Coffee Date",
+            "detail":"I will take you on a coffee date and not bring my iPhone, computer, or Apple Watch",
+            "image":"coffee"
+        ]
     ]
 
     override func viewDidLoad() {
@@ -52,7 +72,18 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let gift = gifts[indexPath.row]
+        print(gift.debugDescription)
         performSegueWithIdentifier("GiftDetailVC", sender: gift)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "GiftDetailVC" {
+            if let detailsVC = segue.destinationViewController as? GiftDetailVC {
+                if let gift = sender as? [String:String] {
+                    detailsVC.gift = gift
+                }
+            }
+        }
     }
 }
 

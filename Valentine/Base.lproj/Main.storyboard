@@ -442,18 +442,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75g-SE-fxm">
-                                <rect key="frame" x="272" y="344" width="57" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75g-SE-fxm">
+                                <rect key="frame" x="272" y="446" width="57" height="30"/>
                                 <state key="normal" title="Redeem">
                                     <color key="titleColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="redeemPushed:" destination="T8d-4X-EaW" eventType="touchUpInside" id="lcv-YJ-W7b"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gift Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXC-ED-fpV">
-                                <rect key="frame" x="261" y="110" width="77" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FP4-YB-SKu">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                                 <subviews>
@@ -499,26 +496,61 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gift Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwO-dh-grP">
-                                <rect key="frame" x="262" y="157" width="76" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I Will buy you that perfume that you want but can't seem to remember the name of" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwO-dh-grP">
+                                <rect key="frame" x="-123" y="289" width="630" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="c3e-75-rEh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raybanLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dlf-Sz-vGf">
+                                <rect key="frame" x="0.0" y="50" width="600" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="pbh-S3-bgR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gift Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXC-ED-fpV">
+                                <rect key="frame" x="80" y="240" width="440" height="21"/>
+                                <fontDescription key="fontDescription" name="IowanOldStyle-Bold" family="Iowan Old Style" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.91303488470000005" blue="0.91379542030000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dlf-Sz-vGf" secondAttribute="trailing" id="0zz-KG-9Fh"/>
                             <constraint firstAttribute="trailing" secondItem="FP4-YB-SKu" secondAttribute="trailing" id="Bii-3t-T8E"/>
                             <constraint firstItem="75g-SE-fxm" firstAttribute="top" secondItem="rXC-ED-fpV" secondAttribute="bottom" constant="213" id="QEw-rF-Nv6"/>
+                            <constraint firstItem="dlf-Sz-vGf" firstAttribute="leading" secondItem="HZW-Vy-OxA" secondAttribute="leading" id="UcD-Ea-4eA"/>
                             <constraint firstItem="FP4-YB-SKu" firstAttribute="top" secondItem="HZW-Vy-OxA" secondAttribute="top" id="VeY-39-Xkr"/>
+                            <constraint firstItem="75g-SE-fxm" firstAttribute="top" secondItem="cwO-dh-grP" secondAttribute="bottom" constant="136" id="WtC-Dp-Fuz"/>
+                            <constraint firstItem="rXC-ED-fpV" firstAttribute="top" secondItem="dlf-Sz-vGf" secondAttribute="bottom" constant="30" id="Wxq-b7-Hqf"/>
+                            <constraint firstItem="dlf-Sz-vGf" firstAttribute="top" secondItem="FP4-YB-SKu" secondAttribute="bottom" id="Y5L-Oc-GVh"/>
                             <constraint firstItem="rXC-ED-fpV" firstAttribute="top" secondItem="upp-1N-tIc" secondAttribute="bottom" constant="75" id="f3p-ih-IxY"/>
                             <constraint firstItem="75g-SE-fxm" firstAttribute="centerX" secondItem="HZW-Vy-OxA" secondAttribute="centerX" id="gNP-hD-6NX"/>
                             <constraint firstItem="cwO-dh-grP" firstAttribute="top" secondItem="rXC-ED-fpV" secondAttribute="bottom" constant="26" id="hYg-Jv-Ywm"/>
                             <constraint firstItem="cwO-dh-grP" firstAttribute="centerX" secondItem="HZW-Vy-OxA" secondAttribute="centerX" id="kLD-Rx-WIo"/>
                             <constraint firstItem="FP4-YB-SKu" firstAttribute="leading" secondItem="HZW-Vy-OxA" secondAttribute="leading" id="nI7-9j-TY3"/>
+                            <constraint firstItem="RYQ-6j-Ijn" firstAttribute="top" secondItem="75g-SE-fxm" secondAttribute="bottom" constant="75" id="p9F-fX-ITA"/>
+                            <constraint firstItem="cwO-dh-grP" firstAttribute="top" secondItem="rXC-ED-fpV" secondAttribute="bottom" constant="26" id="zdj-Op-23J"/>
                             <constraint firstItem="rXC-ED-fpV" firstAttribute="centerX" secondItem="HZW-Vy-OxA" secondAttribute="centerX" id="zgR-rN-weP"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="f3p-ih-IxY"/>
+                                <exclude reference="hYg-Jv-Ywm"/>
+                                <exclude reference="QEw-rF-Nv6"/>
+                                <exclude reference="WtC-Dp-Fuz"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="detail" destination="cwO-dh-grP" id="1bg-Aa-mMj"/>
+                        <outlet property="giftName" destination="rXC-ED-fpV" id="8mP-1Y-Sar"/>
+                        <outlet property="imageView" destination="dlf-Sz-vGf" id="8L8-f6-iKi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhv-nL-5xh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -550,5 +582,6 @@
         <image name="gift-7" width="29" height="30"/>
         <image name="heart-7" width="30" height="30"/>
         <image name="music-7" width="30" height="30"/>
+        <image name="raybanLogo" width="1768" height="1730"/>
     </resources>
 </document>
