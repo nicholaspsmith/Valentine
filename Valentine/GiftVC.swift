@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collection: UICollectionView!
     
@@ -51,7 +51,8 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        //@TODO
+        let gift = gifts[indexPath.row]
+        performSegueWithIdentifier("GiftDetailVC", sender: gift)
     }
 }
 
