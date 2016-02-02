@@ -187,7 +187,7 @@
                             <constraint firstItem="Kbp-HM-PGY" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="z04-XS-hyL"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Our Songs" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Our Songs" image="music-7" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="currentArtistLbl" destination="22t-Gd-nbJ" id="Jm5-E6-mjs"/>
                         <outlet property="currentSongLbl" destination="SuG-eY-QE8" id="Dxd-JL-ql6"/>
@@ -261,7 +261,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorite Memories" image="first" id="cAY-AF-ABR"/>
+                    <tabBarItem key="tabBarItem" title="Favorite Memories" image="heart-7" id="cAY-AF-ABR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zhw-KX-2l0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -355,7 +355,7 @@
                             <constraint firstItem="Ork-VP-f9e" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="pHh-xJ-gT4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Gifts" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Gifts" image="gift-7" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="collection" destination="XJb-gc-XKL" id="Ie1-tT-3xn"/>
                         <segue destination="T8d-4X-EaW" kind="show" identifier="GiftDetailVC" id="Gu0-50-ytC"/>
@@ -445,7 +445,8 @@
     </scenes>
     <resources>
         <image name="coffee" width="700" height="466"/>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="gift-7" width="29" height="30"/>
+        <image name="heart-7" width="30" height="30"/>
+        <image name="music-7" width="30" height="30"/>
     </resources>
 </document>
