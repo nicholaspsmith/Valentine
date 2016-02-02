@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		013679B91C60441700243B83 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013679B81C60441700243B83 /* DataService.swift */; };
+		013679BC1C60447200243B83 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013679BB1C60447200243B83 /* Gift.swift */; };
 		01A2AC321C6025AA0046A4B6 /* GiftDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A2AC311C6025AA0046A4B6 /* GiftDetailVC.swift */; };
 		01A2AC341C603AB40046A4B6 /* MemoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A2AC331C603AB40046A4B6 /* MemoriesVC.swift */; };
 		01A2AC361C603C1F0046A4B6 /* MemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A2AC351C603C1F0046A4B6 /* MemoryCell.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		013679B81C60441700243B83 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		013679BB1C60447200243B83 /* Gift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
 		01A2AC311C6025AA0046A4B6 /* GiftDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftDetailVC.swift; sourceTree = "<group>"; };
 		01A2AC331C603AB40046A4B6 /* MemoriesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesVC.swift; sourceTree = "<group>"; };
 		01A2AC351C603C1F0046A4B6 /* MemoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCell.swift; sourceTree = "<group>"; };
@@ -55,9 +59,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		013679BA1C60446200243B83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				013679BB1C60447200243B83 /* Gift.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		01A2AC371C60424E0046A4B6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				013679B81C60441700243B83 /* DataService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -81,6 +94,7 @@
 		01E20D0E1C59D7A6009BD168 /* Valentine */ = {
 			isa = PBXGroup;
 			children = (
+				013679BA1C60446200243B83 /* Model */,
 				01A2AC371C60424E0046A4B6 /* Services */,
 				01E20D2D1C5C0521009BD168 /* View */,
 				01E20D2C1C5C0507009BD168 /* Controller */,
@@ -201,6 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				013679B91C60441700243B83 /* DataService.swift in Sources */,
+				013679BC1C60447200243B83 /* Gift.swift in Sources */,
 				01E20D2F1C5C058D009BD168 /* SongCell.swift in Sources */,
 				01A2AC341C603AB40046A4B6 /* MemoriesVC.swift in Sources */,
 				01A2AC321C6025AA0046A4B6 /* GiftDetailVC.swift in Sources */,
