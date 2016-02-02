@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOG-fP-zZp">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="67"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Our Songs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1T-kU-iew">
                                         <rect key="frame" x="214" y="23" width="171" height="21"/>
@@ -27,20 +27,24 @@
                                             <constraint firstAttribute="width" constant="171" id="3rg-oO-0GJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="22"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.75631876689999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="p1T-kU-iew" firstAttribute="top" secondItem="EOG-fP-zZp" secondAttribute="top" constant="15" id="DVO-EE-I1g"/>
+                                    <constraint firstAttribute="height" constant="50" id="M73-5z-Ora"/>
                                     <constraint firstAttribute="height" constant="70" id="NJT-2f-MoV"/>
                                     <constraint firstItem="p1T-kU-iew" firstAttribute="centerX" secondItem="EOG-fP-zZp" secondAttribute="centerX" id="eXd-4E-yvL"/>
+                                    <constraint firstAttribute="bottom" secondItem="p1T-kU-iew" secondAttribute="bottom" constant="5" id="iic-0b-mhR"/>
                                     <constraint firstItem="p1T-kU-iew" firstAttribute="centerY" secondItem="EOG-fP-zZp" secondAttribute="centerY" id="rRb-9P-2nf"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="NJT-2f-MoV"/>
                                         <exclude reference="DVO-EE-I1g"/>
+                                        <exclude reference="rRb-9P-2nf"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -65,7 +69,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLQ-xS-1Qf">
                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="32"/>
                                                 <fontDescription key="fontDescription" name="IowanOldStyle-Bold" family="Iowan Old Style" pointSize="14"/>
-                                                <state key="normal" title="&lt;&lt;"/>
+                                                <state key="normal" title="&lt;&lt;">
+                                                    <color key="titleColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="prevPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="roz-2E-gi0"/>
                                                 </connections>
@@ -73,7 +79,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjd-og-EWb">
                                                 <rect key="frame" x="195" y="0.0" width="194" height="32"/>
                                                 <fontDescription key="fontDescription" name="IowanOldStyle-Bold" family="Iowan Old Style" pointSize="14"/>
-                                                <state key="normal" title="||"/>
+                                                <state key="normal" title="||">
+                                                    <color key="titleColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="playPausePressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="zel-sE-chE"/>
                                                 </connections>
@@ -81,7 +89,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of6-yG-cIn">
                                                 <rect key="frame" x="389" y="0.0" width="195" height="32"/>
                                                 <fontDescription key="fontDescription" name="IowanOldStyle-Bold" family="Iowan Old Style" pointSize="14"/>
-                                                <state key="normal" title="&gt;&gt;"/>
+                                                <state key="normal" title="&gt;&gt;">
+                                                    <color key="titleColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="nextPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="VDc-Jn-2wk"/>
                                                 </connections>
@@ -279,16 +289,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gifts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ork-VP-f9e">
-                                <rect key="frame" x="215" y="14" width="171" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="171" id="9nK-sv-x9k"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="22"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.55000000000000004" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XJb-gc-XKL">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XJb-gc-XKL">
                                 <rect key="frame" x="20" y="117" width="560" height="410"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="C0G-AP-TnX">
@@ -320,7 +321,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="aXb-jT-PtE" secondAttribute="trailing" constant="5" id="1dm-HJ-pA7"/>
                                             <constraint firstItem="aXb-jT-PtE" firstAttribute="top" secondItem="0Tz-sW-K47" secondAttribute="bottom" id="JUp-GL-aJD"/>
@@ -329,7 +330,7 @@
                                             <constraint firstItem="aXb-jT-PtE" firstAttribute="top" secondItem="0Tz-sW-K47" secondAttribute="bottom" id="daK-dd-KEc"/>
                                             <constraint firstAttribute="trailing" secondItem="0Tz-sW-K47" secondAttribute="trailing" id="gTM-Ul-uYL"/>
                                             <constraint firstItem="0Tz-sW-K47" firstAttribute="leading" secondItem="koO-OP-rxB" secondAttribute="leading" id="jDW-Ik-ZyQ"/>
-                                            <constraint firstAttribute="bottom" secondItem="aXb-jT-PtE" secondAttribute="bottom" id="tqo-2p-d8J"/>
+                                            <constraint firstAttribute="bottom" secondItem="aXb-jT-PtE" secondAttribute="bottom" constant="3" id="tqo-2p-d8J"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -344,15 +345,46 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n6Q-2W-P2g">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="51"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gifts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggm-53-ieF">
+                                        <rect key="frame" x="215" y="24" width="171" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="171" id="iqG-VJ-s4Z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ggm-53-ieF" firstAttribute="centerX" secondItem="n6Q-2W-P2g" secondAttribute="centerX" id="3sh-BE-gm4"/>
+                                    <constraint firstAttribute="height" constant="50" id="CYG-J9-bgH"/>
+                                    <constraint firstItem="Ggm-53-ieF" firstAttribute="centerY" secondItem="n6Q-2W-P2g" secondAttribute="centerY" id="Cxr-J4-LhR"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="ULQ-WT-swI"/>
+                                    <constraint firstItem="Ggm-53-ieF" firstAttribute="top" secondItem="n6Q-2W-P2g" secondAttribute="top" constant="15" id="hcy-6T-b6u"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ggm-53-ieF" secondAttribute="bottom" constant="5" id="kCk-fb-zTe"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ULQ-WT-swI"/>
+                                        <exclude reference="Cxr-J4-LhR"/>
+                                        <exclude reference="hcy-6T-b6u"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.91303488470000005" blue="0.91379542030000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="XJb-gc-XKL" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="3D1-YX-gIu"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="XJb-gc-XKL" secondAttribute="bottom" constant="20" id="Dg6-hA-DU9"/>
+                            <constraint firstItem="n6Q-2W-P2g" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="N8L-R7-GFP"/>
                             <constraint firstItem="XJb-gc-XKL" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="O8w-Id-8N1"/>
-                            <constraint firstItem="Ork-VP-f9e" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="topMargin" constant="28" id="i8T-yo-ijC"/>
+                            <constraint firstItem="n6Q-2W-P2g" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="V1l-TS-eDe"/>
                             <constraint firstItem="XJb-gc-XKL" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="75" id="ohn-VP-BkF"/>
-                            <constraint firstItem="Ork-VP-f9e" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="pHh-xJ-gT4"/>
+                            <constraint firstAttribute="trailing" secondItem="n6Q-2W-P2g" secondAttribute="trailing" id="rHB-e4-05C"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Gifts" image="gift-7" id="cPa-gy-q4n"/>
@@ -377,43 +409,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="760-fp-lux">
-                                <rect key="frame" x="215" y="20" width="171" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="171" id="CRR-gk-q3y"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75g-SE-fxm">
+                                <rect key="frame" x="272" y="344" width="57" height="30"/>
+                                <state key="normal" title="Redeem">
+                                    <color key="titleColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gift Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXC-ED-fpV">
+                                <rect key="frame" x="261" y="110" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CUd-4p-W5G">
-                                <rect key="frame" x="180" y="49" width="240" height="1"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FP4-YB-SKu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gifts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbG-dO-Ux2">
+                                        <rect key="frame" x="215" y="24" width="171" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="171" id="5bx-u7-gZE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTv-1e-1CG">
+                                        <rect key="frame" x="8" y="20" width="61" height="30"/>
+                                        <state key="normal" title="&lt; Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="CiD-SM-CT2"/>
-                                    <constraint firstAttribute="height" constant="1" id="WOa-Is-rY8"/>
+                                    <constraint firstItem="JbG-dO-Ux2" firstAttribute="centerY" secondItem="FP4-YB-SKu" secondAttribute="centerY" id="1AH-Jh-e7R"/>
+                                    <constraint firstAttribute="height" constant="50" id="4F2-uv-C1Y"/>
+                                    <constraint firstItem="JbG-dO-Ux2" firstAttribute="centerX" secondItem="FP4-YB-SKu" secondAttribute="centerX" id="8bE-D3-4Qf"/>
+                                    <constraint firstItem="KTv-1e-1CG" firstAttribute="centerY" secondItem="FP4-YB-SKu" secondAttribute="centerY" id="91Z-13-0OQ"/>
+                                    <constraint firstItem="JbG-dO-Ux2" firstAttribute="bottom" secondItem="KTv-1e-1CG" secondAttribute="bottom" id="Ano-8i-SrZ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="C2x-Vd-Y2i"/>
+                                    <constraint firstAttribute="bottom" secondItem="JbG-dO-Ux2" secondAttribute="bottom" constant="5" id="dhk-dE-WmC"/>
+                                    <constraint firstItem="KTv-1e-1CG" firstAttribute="leading" secondItem="FP4-YB-SKu" secondAttribute="leading" constant="8" id="gcd-gx-83L"/>
+                                    <constraint firstItem="JbG-dO-Ux2" firstAttribute="top" secondItem="FP4-YB-SKu" secondAttribute="top" constant="15" id="rPo-mI-RHH"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="sfT-zv-zME"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="C2x-Vd-Y2i"/>
+                                        <exclude reference="sfT-zv-zME"/>
+                                        <exclude reference="91Z-13-0OQ"/>
+                                        <exclude reference="1AH-Jh-e7R"/>
+                                        <exclude reference="rPo-mI-RHH"/>
+                                    </mask>
+                                </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75g-SE-fxm">
-                                <rect key="frame" x="272" y="344" width="57" height="30"/>
-                                <state key="normal" title="Redeem"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gift Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXC-ED-fpV">
-                                <rect key="frame" x="262" y="110" width="76" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gift Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwO-dh-grP">
+                                <rect key="frame" x="262" y="157" width="76" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.75631876689999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.91303488470000005" blue="0.91379542030000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="CUd-4p-W5G" firstAttribute="top" secondItem="760-fp-lux" secondAttribute="bottom" constant="16" id="Del-Yc-1HL"/>
+                            <constraint firstAttribute="trailing" secondItem="FP4-YB-SKu" secondAttribute="trailing" id="Bii-3t-T8E"/>
                             <constraint firstItem="75g-SE-fxm" firstAttribute="top" secondItem="rXC-ED-fpV" secondAttribute="bottom" constant="213" id="QEw-rF-Nv6"/>
+                            <constraint firstItem="FP4-YB-SKu" firstAttribute="top" secondItem="HZW-Vy-OxA" secondAttribute="top" id="VeY-39-Xkr"/>
                             <constraint firstItem="rXC-ED-fpV" firstAttribute="top" secondItem="upp-1N-tIc" secondAttribute="bottom" constant="75" id="f3p-ih-IxY"/>
                             <constraint firstItem="75g-SE-fxm" firstAttribute="centerX" secondItem="HZW-Vy-OxA" secondAttribute="centerX" id="gNP-hD-6NX"/>
-                            <constraint firstItem="760-fp-lux" firstAttribute="top" secondItem="upp-1N-tIc" secondAttribute="bottom" id="tKS-my-QPJ"/>
-                            <constraint firstItem="760-fp-lux" firstAttribute="centerX" secondItem="HZW-Vy-OxA" secondAttribute="centerX" id="vwx-3m-krw"/>
-                            <constraint firstItem="CUd-4p-W5G" firstAttribute="centerX" secondItem="HZW-Vy-OxA" secondAttribute="centerX" id="wIT-Ut-6bE"/>
+                            <constraint firstItem="cwO-dh-grP" firstAttribute="top" secondItem="rXC-ED-fpV" secondAttribute="bottom" constant="26" id="hYg-Jv-Ywm"/>
+                            <constraint firstItem="cwO-dh-grP" firstAttribute="centerX" secondItem="HZW-Vy-OxA" secondAttribute="centerX" id="kLD-Rx-WIo"/>
+                            <constraint firstItem="FP4-YB-SKu" firstAttribute="leading" secondItem="HZW-Vy-OxA" secondAttribute="leading" id="nI7-9j-TY3"/>
                             <constraint firstItem="rXC-ED-fpV" firstAttribute="centerX" secondItem="HZW-Vy-OxA" secondAttribute="centerX" id="zgR-rN-weP"/>
                         </constraints>
                     </view>
