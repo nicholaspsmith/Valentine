@@ -211,7 +211,7 @@
         <!--Favorite Memories-->
         <scene sceneID="TOr-nR-2QJ">
             <objects>
-                <viewController id="H1x-MK-LCU" sceneMemberID="viewController">
+                <viewController id="H1x-MK-LCU" customClass="MemoriesVC" customModule="Valentine" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="feO-D7-qkB"/>
                         <viewControllerLayoutGuide type="bottom" id="Ezg-Xy-LW6"/>
@@ -258,19 +258,19 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="86" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="scP-2n-peb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="scP-2n-peb">
                                 <rect key="frame" x="0.0" y="55" width="600" height="496"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="86" id="dZN-B1-0B5">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="86"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemoryCell" rowHeight="68" id="dZN-B1-0B5" customClass="MemoryCell" customModule="Valentine" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dZN-B1-0B5" id="U9f-1q-IZX">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="85"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Going to New Orleans on a whim" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ahK-JW-Ts7">
-                                                    <rect key="frame" x="26" y="32" width="548" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Going to New Orleans on a whim" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ahK-JW-Ts7">
+                                                    <rect key="frame" x="26" y="23" width="548" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -283,6 +283,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.91303488470000005" blue="0.91379542030000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="memoryLabel" destination="ahK-JW-Ts7" id="DSL-0Z-W8A"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -299,6 +302,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorite Memories" image="heart-7" id="cAY-AF-ABR"/>
+                    <connections>
+                        <outlet property="tableView" destination="scP-2n-peb" id="9iP-7e-MKN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zhw-KX-2l0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
