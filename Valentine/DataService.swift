@@ -31,6 +31,12 @@ class DataService {
         }
     }
     
+    func addGift(gift: Gift) {
+        _loadedGifts.append(gift)
+        savePosts()
+        loadPosts()
+    }
+    
     func savePosts() {
         let giftsData = NSKeyedArchiver.archivedDataWithRootObject(_loadedGifts)
         NSUserDefaults.standardUserDefaults().setObject(giftsData, forKey: GIFTS_KEY)
@@ -46,6 +52,25 @@ class DataService {
         NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "giftsLoaded", object: nil))
     }
     
+    func saveImageAndCreatePath(image: UIImage) -> String {
+        let imgData = UIImageJPEGRepresentation(image, 0.7)
+        let imgPath = "image\(NSDate.timeIntervalSinceReferenceDate()).png"
+        let fullPath = documentsPathForFileName(imgPath)
+        imgData?.writeToFile(fullPath, atomically: true)
+        return imgPath
+    }
     
+    func imageForPath(path: String) -> UIImage? {
+        let fullPath = documentsPathForFileName(path)
+        let image = UIImage(named: fullPath)
+        return image
+    }
 
+    func documentsPathForFileName(name: String) -> String {
+        // Images are stored in documents directory, not nsuserdefaults
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let fullPath = paths[0] as NSString
+        // have to cast as NSString because it needs the following method
+        return fullPath.stringByAppendingPathComponent(name)
+    }
 }
