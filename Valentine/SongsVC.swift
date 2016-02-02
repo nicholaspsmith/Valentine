@@ -17,9 +17,6 @@ class SongsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var songCounter = 0
     var musicPlayer: AVAudioPlayer!
-//    var songs = ["cruise","youandi","anywherewithyou","yourman"]
-//    var songNames = ["Cruise", "You and I", "Anywhere With You", "Your Man"]
-    
     var songs = [
         ["name":"Cruise","artist":"Florida Georgia Line","filename":"cruise"],
         ["name":"You and I","artist":"Ingrid Michaelson","filename":"youandi"],
@@ -48,7 +45,8 @@ class SongsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // @TODO
+        songCounter = indexPath.row
+        playSong(songs[songCounter]["filename"]!)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
