@@ -9,7 +9,7 @@
         <!--Our Songs-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Valentine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="SongsVC" customModule="Valentine" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -220,56 +220,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Orleans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQv-v3-aWG">
-                                <rect key="frame" x="186" y="63" width="98" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First date to the grocery store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btx-r2-lHE">
-                                <rect key="frame" x="56" y="108" width="228" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Going to see a movie at iPic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzf-lf-TRa">
-                                <rect key="frame" x="73" y="150" width="211" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Driving through big sur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brp-kB-Gb1">
-                                <rect key="frame" x="108" y="192" width="176" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Taking NLP training together" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="436-HG-6ND">
-                                <rect key="frame" x="65" y="221" width="219" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Going to Richard Gariott's Castle together with Anna" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71D-R8-wp4">
-                                <rect key="frame" x="-116" y="250" width="400" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swimming at Balmoreah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3a-nw-pmm">
-                                <rect key="frame" x="99" y="279" width="185" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Camping in the Pacific Northwest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92R-J6-Rx2">
-                                <rect key="frame" x="29" y="308" width="255" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VSV-td-tDf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="53"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Favorite Memories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLi-Sf-N8V">
+                                        <rect key="frame" x="8" y="23" width="584" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="171" id="h3T-Ky-HF8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="h3T-Ky-HF8"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="mLi-Sf-N8V" firstAttribute="leading" secondItem="VSV-td-tDf" secondAttribute="leading" constant="8" id="3iX-oV-uuX"/>
+                                    <constraint firstAttribute="bottom" secondItem="mLi-Sf-N8V" secondAttribute="bottom" constant="5" id="BXh-Ul-MIa"/>
+                                    <constraint firstAttribute="height" constant="70" id="Vhp-Zv-Wtv"/>
+                                    <constraint firstItem="mLi-Sf-N8V" firstAttribute="centerX" secondItem="VSV-td-tDf" secondAttribute="centerX" id="WGS-hu-NUf"/>
+                                    <constraint firstAttribute="trailing" secondItem="mLi-Sf-N8V" secondAttribute="trailing" constant="8" id="WWm-6X-Ntl"/>
+                                    <constraint firstItem="mLi-Sf-N8V" firstAttribute="centerY" secondItem="VSV-td-tDf" secondAttribute="centerY" id="buN-b6-eu9"/>
+                                    <constraint firstAttribute="height" constant="50" id="ena-mx-XU9"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="s2y-Ah-Jzs"/>
+                                    <constraint firstItem="mLi-Sf-N8V" firstAttribute="top" secondItem="VSV-td-tDf" secondAttribute="top" constant="15" id="ump-6g-xtE"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Vhp-Zv-Wtv"/>
+                                        <exclude reference="buN-b6-eu9"/>
+                                        <exclude reference="ump-6g-xtE"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="86" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="scP-2n-peb">
+                                <rect key="frame" x="0.0" y="55" width="600" height="496"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="86" id="dZN-B1-0B5">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="86"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dZN-B1-0B5" id="U9f-1q-IZX">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="85"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Going to New Orleans on a whim" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ahK-JW-Ts7">
+                                                    <rect key="frame" x="26" y="32" width="548" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ahK-JW-Ts7" secondAttribute="trailing" constant="18" id="eUC-eC-eTJ"/>
+                                                <constraint firstItem="ahK-JW-Ts7" firstAttribute="centerY" secondItem="U9f-1q-IZX" secondAttribute="centerY" id="hXS-Bu-vP6"/>
+                                                <constraint firstItem="ahK-JW-Ts7" firstAttribute="leading" secondItem="U9f-1q-IZX" secondAttribute="leadingMargin" constant="18" id="klN-Uk-fPp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.91303488470000005" blue="0.91379542030000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="VSV-td-tDf" secondAttribute="trailing" constant="-20" id="1PR-R9-ZBk"/>
+                            <constraint firstAttribute="trailing" secondItem="scP-2n-peb" secondAttribute="trailing" id="65b-AO-8f3"/>
+                            <constraint firstItem="Ezg-Xy-LW6" firstAttribute="top" secondItem="scP-2n-peb" secondAttribute="bottom" id="Ag9-dj-mI5"/>
+                            <constraint firstItem="VSV-td-tDf" firstAttribute="leading" secondItem="GHC-LH-Jzd" secondAttribute="leadingMargin" constant="-20" id="JGf-TI-6MJ"/>
+                            <constraint firstItem="scP-2n-peb" firstAttribute="leading" secondItem="GHC-LH-Jzd" secondAttribute="leading" id="cKh-Ge-ebw"/>
+                            <constraint firstItem="scP-2n-peb" firstAttribute="top" secondItem="VSV-td-tDf" secondAttribute="bottom" id="fMK-3U-Dxh"/>
+                            <constraint firstItem="VSV-td-tDf" firstAttribute="top" secondItem="GHC-LH-Jzd" secondAttribute="topMargin" id="ha7-0p-zTA"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorite Memories" image="heart-7" id="cAY-AF-ABR"/>
                 </viewController>

@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SongsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var currentSongLbl: UILabel!

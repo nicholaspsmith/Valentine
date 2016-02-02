@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		01A2AC321C6025AA0046A4B6 /* GiftDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A2AC311C6025AA0046A4B6 /* GiftDetailVC.swift */; };
 		01E20D101C59D7A6009BD168 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E20D0F1C59D7A6009BD168 /* AppDelegate.swift */; };
-		01E20D121C59D7A6009BD168 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E20D111C59D7A6009BD168 /* FirstViewController.swift */; };
+		01E20D121C59D7A6009BD168 /* SongsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E20D111C59D7A6009BD168 /* SongsVC.swift */; };
 		01E20D141C59D7A6009BD168 /* GiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E20D131C59D7A6009BD168 /* GiftVC.swift */; };
 		01E20D171C59D7A6009BD168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E20D151C59D7A6009BD168 /* Main.storyboard */; };
 		01E20D191C59D7A6009BD168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01E20D181C59D7A6009BD168 /* Assets.xcassets */; };
@@ -26,7 +26,7 @@
 		01A2AC311C6025AA0046A4B6 /* GiftDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftDetailVC.swift; sourceTree = "<group>"; };
 		01E20D0C1C59D7A6009BD168 /* Valentine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Valentine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E20D0F1C59D7A6009BD168 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01E20D111C59D7A6009BD168 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		01E20D111C59D7A6009BD168 /* SongsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsVC.swift; sourceTree = "<group>"; };
 		01E20D131C59D7A6009BD168 /* GiftVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftVC.swift; sourceTree = "<group>"; };
 		01E20D161C59D7A6009BD168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01E20D181C59D7A6009BD168 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		01E20D2C1C5C0507009BD168 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				01E20D111C59D7A6009BD168 /* FirstViewController.swift */,
+				01E20D111C59D7A6009BD168 /* SongsVC.swift */,
 				01E20D131C59D7A6009BD168 /* GiftVC.swift */,
 				01A2AC311C6025AA0046A4B6 /* GiftDetailVC.swift */,
 			);
@@ -191,7 +191,7 @@
 				01A2AC321C6025AA0046A4B6 /* GiftDetailVC.swift in Sources */,
 				01E20D141C59D7A6009BD168 /* GiftVC.swift in Sources */,
 				01E20D101C59D7A6009BD168 /* AppDelegate.swift in Sources */,
-				01E20D121C59D7A6009BD168 /* FirstViewController.swift in Sources */,
+				01E20D121C59D7A6009BD168 /* SongsVC.swift in Sources */,
 				01E20D311C5E6F52009BD168 /* GiftCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
