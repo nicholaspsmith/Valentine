@@ -14,5 +14,12 @@ class DataService {
     static let instance = DataService()
     
     let GIFTS_KEY = "gifts"
+    private var _loadedGifts = [Gift]()
     
+    var loadedPosts: [Gift] {
+        return _loadedPosts
+    }
+    
+    private var _giftNumber: Int = 0
+
 }
