@@ -16,7 +16,7 @@ class DataService {
     let GIFTS_KEY = "gifts"
     private var _loadedGifts = [Gift]()
     
-    var loadedPosts: [Gift] {
+    var loadedGifts: [Gift] {
         return _loadedGifts
     }
     
@@ -33,17 +33,17 @@ class DataService {
     
     func addGift(gift: Gift) {
         _loadedGifts.append(gift)
-        savePosts()
-        loadPosts()
+        saveGifts()
+        loadGifts()
     }
     
-    func savePosts() {
+    func saveGifts() {
         let giftsData = NSKeyedArchiver.archivedDataWithRootObject(_loadedGifts)
         NSUserDefaults.standardUserDefaults().setObject(giftsData, forKey: GIFTS_KEY)
         NSUserDefaults.standardUserDefaults().synchronize()
     }
     
-    func loadPosts() {
+    func loadGifts() {
         if let giftsData = NSUserDefaults.standardUserDefaults().objectForKey(GIFTS_KEY) as? NSData {
             if let giftsArray = NSKeyedUnarchiver.unarchiveObjectWithData(giftsData) as? [Gift] {
                 _loadedGifts = giftsArray

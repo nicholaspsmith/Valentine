@@ -18,8 +18,8 @@ class GiftCell: UICollectionViewCell {
         layer.cornerRadius = 5.0
     }
     
-    func configureCell(image: String, label: String) {
-        thumbImg.image = UIImage(named: image)
-        giftNameLbl.text = label
+    func configureCell(gift: Gift) {
+        thumbImg.image = UIImage(named: gift.imagePath)
+        giftNameLbl.text = gift.giftName
     }
 }

@@ -45,6 +45,23 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         
         collection.delegate = self
         collection.dataSource = self
+        
+        DataService.instance.loadGifts()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "onGiftsLoaded:", name: "giftsLoaded", object: nil)
+        
+        
+        if DataService.instance.loadedGifts.count == 0 {
+            let current_date = NSDate()
+            let feb_14 = NSDate(timeIntervalSince1970: 1455500164.46394)
+            if current_date.compare(feb_14) == NSComparisonResult.OrderedAscending {
+                for var i = 0; i < gifts.count; i++ {
+                    let gift = Gift(imagePath: gifts[i]["image"]!, giftName: gifts[i]["name"]!, giftDesc: gifts[i]["detail"]!)
+                    DataService.instance.addGift(gift)
+                    print(gift)
+                }
+                
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,8 +75,9 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
+        let gift = DataService.instance.loadedGifts[indexPath.row]
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("GiftCell", forIndexPath: indexPath) as? GiftCell {
-            cell.configureCell(gifts[indexPath.row]["image"]!, label: gifts[indexPath.row]["name"]!)
+            cell.configureCell(gift)
             return cell
         } else {
             return UICollectionViewCell()
@@ -83,6 +101,10 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
                 }
             }
         }
+    }
+    
+    func onGiftsLoaded(notif: AnyObject) {
+        collection.reloadData()
     }
 }
 
