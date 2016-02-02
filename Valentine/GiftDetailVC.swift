@@ -22,5 +22,7 @@ class GiftDetailVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func cancelPressed(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }
