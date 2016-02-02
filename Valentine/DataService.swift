@@ -17,7 +17,13 @@ class DataService {
     private var _loadedGifts = [Gift]()
     
     var loadedGifts: [Gift] {
-        return _loadedGifts
+        get {
+            return _loadedGifts
+        }
+        set {
+            _loadedGifts = newValue
+            self.saveGifts()
+        }
     }
     
     private var _giftNumber: Int = 0

@@ -13,6 +13,7 @@ class Gift: NSObject, NSCoding {
     private var _giftName: String!
     private var _giftDesc: String!
     private var _imagePath: String!
+    private var _used: Bool!
     
     var imagePath: String {
         return _imagePath
@@ -24,6 +25,15 @@ class Gift: NSObject, NSCoding {
     
     var giftDesc: String {
         return _giftDesc
+    }
+    
+    var used: Bool {
+        get {
+            return _used
+        }
+        set {
+            _used = newValue
+        }
     }
     
     init(imagePath: String, giftName: String, giftDesc: String) {

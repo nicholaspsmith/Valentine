@@ -442,15 +442,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75g-SE-fxm">
-                                <rect key="frame" x="272" y="446" width="57" height="30"/>
-                                <state key="normal" title="Redeem">
-                                    <color key="titleColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="redeemPushed:" destination="T8d-4X-EaW" eventType="touchUpInside" id="lcv-YJ-W7b"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FP4-YB-SKu">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                                 <subviews>
@@ -522,18 +513,14 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="dlf-Sz-vGf" secondAttribute="trailing" id="0zz-KG-9Fh"/>
                             <constraint firstAttribute="trailing" secondItem="FP4-YB-SKu" secondAttribute="trailing" id="Bii-3t-T8E"/>
-                            <constraint firstItem="75g-SE-fxm" firstAttribute="top" secondItem="rXC-ED-fpV" secondAttribute="bottom" constant="213" id="QEw-rF-Nv6"/>
                             <constraint firstItem="dlf-Sz-vGf" firstAttribute="leading" secondItem="HZW-Vy-OxA" secondAttribute="leading" id="UcD-Ea-4eA"/>
                             <constraint firstItem="FP4-YB-SKu" firstAttribute="top" secondItem="HZW-Vy-OxA" secondAttribute="top" id="VeY-39-Xkr"/>
-                            <constraint firstItem="75g-SE-fxm" firstAttribute="top" secondItem="cwO-dh-grP" secondAttribute="bottom" constant="136" id="WtC-Dp-Fuz"/>
                             <constraint firstItem="rXC-ED-fpV" firstAttribute="top" secondItem="dlf-Sz-vGf" secondAttribute="bottom" constant="30" id="Wxq-b7-Hqf"/>
                             <constraint firstItem="dlf-Sz-vGf" firstAttribute="top" secondItem="FP4-YB-SKu" secondAttribute="bottom" id="Y5L-Oc-GVh"/>
                             <constraint firstItem="rXC-ED-fpV" firstAttribute="top" secondItem="upp-1N-tIc" secondAttribute="bottom" constant="75" id="f3p-ih-IxY"/>
-                            <constraint firstItem="75g-SE-fxm" firstAttribute="centerX" secondItem="HZW-Vy-OxA" secondAttribute="centerX" id="gNP-hD-6NX"/>
                             <constraint firstItem="cwO-dh-grP" firstAttribute="top" secondItem="rXC-ED-fpV" secondAttribute="bottom" constant="26" id="hYg-Jv-Ywm"/>
                             <constraint firstItem="cwO-dh-grP" firstAttribute="centerX" secondItem="HZW-Vy-OxA" secondAttribute="centerX" id="kLD-Rx-WIo"/>
                             <constraint firstItem="FP4-YB-SKu" firstAttribute="leading" secondItem="HZW-Vy-OxA" secondAttribute="leading" id="nI7-9j-TY3"/>
-                            <constraint firstItem="RYQ-6j-Ijn" firstAttribute="top" secondItem="75g-SE-fxm" secondAttribute="bottom" constant="75" id="p9F-fX-ITA"/>
                             <constraint firstItem="cwO-dh-grP" firstAttribute="top" secondItem="rXC-ED-fpV" secondAttribute="bottom" constant="26" id="zdj-Op-23J"/>
                             <constraint firstItem="rXC-ED-fpV" firstAttribute="centerX" secondItem="HZW-Vy-OxA" secondAttribute="centerX" id="zgR-rN-weP"/>
                         </constraints>
@@ -541,8 +528,6 @@
                             <mask key="constraints">
                                 <exclude reference="f3p-ih-IxY"/>
                                 <exclude reference="hYg-Jv-Ywm"/>
-                                <exclude reference="QEw-rF-Nv6"/>
-                                <exclude reference="WtC-Dp-Fuz"/>
                             </mask>
                         </variation>
                     </view>
