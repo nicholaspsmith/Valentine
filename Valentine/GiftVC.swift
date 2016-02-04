@@ -16,7 +16,7 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         [
             "name":"1 Pair of Ray Bans",
             "detail":"I will buy you any pair of Ray Bans that you like",
-            "image":"raybanLogo"
+            "image":"raybans"
         ],
         [
             "name":"1 Bottle Miss Dior - Blooming Bouquet",

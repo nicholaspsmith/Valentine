@@ -272,7 +272,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Going to New Orleans on a whim" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ahK-JW-Ts7">
                                                     <rect key="frame" x="26" y="23" width="548" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -322,31 +322,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n6Q-2W-P2g">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="51"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gifts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggm-53-ieF">
+                                        <rect key="frame" x="215" y="24" width="171" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="171" id="iqG-VJ-s4Z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ggm-53-ieF" firstAttribute="centerX" secondItem="n6Q-2W-P2g" secondAttribute="centerX" id="3sh-BE-gm4"/>
+                                    <constraint firstAttribute="height" constant="50" id="CYG-J9-bgH"/>
+                                    <constraint firstItem="Ggm-53-ieF" firstAttribute="centerY" secondItem="n6Q-2W-P2g" secondAttribute="centerY" id="Cxr-J4-LhR"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="ULQ-WT-swI"/>
+                                    <constraint firstItem="Ggm-53-ieF" firstAttribute="top" secondItem="n6Q-2W-P2g" secondAttribute="top" constant="15" id="hcy-6T-b6u"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ggm-53-ieF" secondAttribute="bottom" constant="5" id="kCk-fb-zTe"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ULQ-WT-swI"/>
+                                        <exclude reference="Cxr-J4-LhR"/>
+                                        <exclude reference="hcy-6T-b6u"/>
+                                    </mask>
+                                </variation>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XJb-gc-XKL">
                                 <rect key="frame" x="20" y="117" width="560" height="410"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="C0G-AP-TnX">
-                                    <size key="itemSize" width="132" height="132"/>
+                                    <size key="itemSize" width="132" height="144"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GiftCell" id="koO-OP-rxB" customClass="GiftCell" customModule="Valentine" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="144"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="132" height="144"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="coffee" translatesAutoresizingMaskIntoConstraints="NO" id="0Tz-sW-K47">
-                                                    <rect key="frame" x="0.0" y="0.0" width="132" height="81"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="missdior" translatesAutoresizingMaskIntoConstraints="NO" id="0Tz-sW-K47">
+                                                    <rect key="frame" x="0.0" y="0.0" width="132" height="96"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="82" id="3ft-rH-0jT"/>
+                                                        <constraint firstAttribute="height" constant="96" id="3ft-rH-0jT"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 Coffee Date for 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="aXb-jT-PtE">
-                                                    <rect key="frame" x="10" y="87" width="113" height="37"/>
+                                                    <rect key="frame" x="10" y="103" width="113" height="37"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -378,36 +408,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n6Q-2W-P2g">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="51"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gifts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggm-53-ieF">
-                                        <rect key="frame" x="215" y="24" width="171" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="171" id="iqG-VJ-s4Z"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="Ggm-53-ieF" firstAttribute="centerX" secondItem="n6Q-2W-P2g" secondAttribute="centerX" id="3sh-BE-gm4"/>
-                                    <constraint firstAttribute="height" constant="50" id="CYG-J9-bgH"/>
-                                    <constraint firstItem="Ggm-53-ieF" firstAttribute="centerY" secondItem="n6Q-2W-P2g" secondAttribute="centerY" id="Cxr-J4-LhR"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="ULQ-WT-swI"/>
-                                    <constraint firstItem="Ggm-53-ieF" firstAttribute="top" secondItem="n6Q-2W-P2g" secondAttribute="top" constant="15" id="hcy-6T-b6u"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ggm-53-ieF" secondAttribute="bottom" constant="5" id="kCk-fb-zTe"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="ULQ-WT-swI"/>
-                                        <exclude reference="Cxr-J4-LhR"/>
-                                        <exclude reference="hcy-6T-b6u"/>
-                                    </mask>
-                                </variation>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.91303488470000005" blue="0.91379542030000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -563,9 +563,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="coffee" width="700" height="466"/>
         <image name="gift-7" width="29" height="30"/>
         <image name="heart-7" width="30" height="30"/>
+        <image name="missdior" width="355" height="355"/>
         <image name="music-7" width="30" height="30"/>
         <image name="raybanLogo" width="1768" height="1730"/>
     </resources>
