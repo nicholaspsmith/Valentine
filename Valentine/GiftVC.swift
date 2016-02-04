@@ -19,9 +19,9 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             "image":"raybanLogo"
         ],
         [
-            "name":"1 Bottle of Perfume",
-            "detail":"I will buy you that perfume that you want but can't seem to remember the name of",
-            "image":"perfume"
+            "name":"1 Bottle Miss Dior - Blooming Bouquet",
+            "detail":"I will buy you one bottle of Blooming Bouquet by Miss Dior at any time of your choosing.",
+            "image":"missdior"
         ],
         [
             "name":"1 Foot Rub",
@@ -49,6 +49,17 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         DataService.instance.loadGifts()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "onGiftsLoaded:", name: "giftsLoaded", object: nil)
         
+        if DataService.instance.loadedGifts.count == 0 {
+            let current_date = NSDate()
+            let feb_14 = NSDate(timeIntervalSince1970: 1455500164.46394)
+            if current_date.compare(feb_14) == NSComparisonResult.OrderedAscending {
+                for var i = 0; i < gifts.count; i++ {
+                    let gift = Gift(imagePath: gifts[i]["image"]!, giftName: gifts[i]["name"]!, giftDesc: gifts[i]["detail"]!)
+                    DataService.instance.addGift(gift)
+                }
+                
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,18 +103,6 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     func onGiftsLoaded(notif: AnyObject) {
         collection.reloadData()
-        
-        if DataService.instance.loadedGifts.count == 0 {
-            let current_date = NSDate()
-            let feb_14 = NSDate(timeIntervalSince1970: 1455500164.46394)
-            if current_date.compare(feb_14) == NSComparisonResult.OrderedAscending {
-                for var i = 0; i < gifts.count; i++ {
-                    let gift = Gift(imagePath: gifts[i]["image"]!, giftName: gifts[i]["name"]!, giftDesc: gifts[i]["detail"]!)
-                    DataService.instance.addGift(gift)
-                }
-                
-            }
-        }
     }
 }
 
