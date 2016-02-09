@@ -30,6 +30,16 @@ class MemoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        if DataService.instance.loadedMemories.count == 0 {
+            let current_date = NSDate()
+            let feb_14 = NSDate(timeIntervalSince1970: 1455500164.46394)
+            if current_date.compare(feb_14) == NSComparisonResult.OrderedAscending {
+                for var i = 0; i < memories.count; i++ {
+                    DataService.instance.addMemory(memories[i])
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,12 +49,24 @@ class MemoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCellWithIdentifier("MemoryCell") as? MemoryCell {
-            cell.configureCell(memories[indexPath.row])
-            return cell
+        
+        if indexPath.row < memories.count {
+            let memory = DataService.instance.loadedMemories[indexPath.row]
+            if let cell = tableView.dequeueReusableCellWithIdentifier("MemoryCell") as? MemoryCell {
+                cell.configureCell(memory)
+                return cell
+            } else {
+                return UITableViewCell()
+            }
         } else {
-            return UITableViewCell()
+            print(indexPath.row)
+            if let cell = tableView.dequeueReusableCellWithIdentifier("AddMemoryCell") as? AddMemoryCell {
+                return cell
+            } else {
+                return UITableViewCell()
+            }
         }
+
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -56,6 +78,6 @@ class MemoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return memories.count
+        return memories.count + 1
     }
 }

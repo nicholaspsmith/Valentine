@@ -269,9 +269,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Going to New Orleans on a whim" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ahK-JW-Ts7">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Going to New Orleans on a whim" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ahK-JW-Ts7">
                                                     <rect key="frame" x="26" y="23" width="548" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -286,6 +286,43 @@
                                         <connections>
                                             <outlet property="memoryLabel" destination="ahK-JW-Ts7" id="DSL-0Z-W8A"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddMemoryCell" rowHeight="59" id="Tyv-Is-tz6" customClass="AddMemoryCell" customModule="Valentine" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="96" width="600" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tyv-Is-tz6" id="CJX-a6-fyC">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="58"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8i-xK-xxV">
+                                                    <rect key="frame" x="0.0" y="9" width="600" height="37"/>
+                                                    <color key="backgroundColor" red="0.33394803336703005" green="1" blue="0.5379218800630251" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                                    <state key="normal" title="Add Memory">
+                                                        <color key="titleColor" red="0.95064807920000005" green="1" blue="0.94668253440000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="u8i-xK-xxV" firstAttribute="leading" secondItem="CJX-a6-fyC" secondAttribute="leading" id="6Am-t4-CCn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="u8i-xK-xxV" secondAttribute="bottom" id="96i-xu-UOQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="u8i-xK-xxV" secondAttribute="trailing" id="HUm-2p-0Bm"/>
+                                                <constraint firstAttribute="bottom" secondItem="u8i-xK-xxV" secondAttribute="bottom" id="IRq-d6-0Jf"/>
+                                                <constraint firstItem="u8i-xK-xxV" firstAttribute="top" secondItem="CJX-a6-fyC" secondAttribute="topMargin" id="NIB-h7-nHa"/>
+                                                <constraint firstItem="u8i-xK-xxV" firstAttribute="leading" secondItem="CJX-a6-fyC" secondAttribute="leadingMargin" id="Svm-UT-bnU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="u8i-xK-xxV" secondAttribute="trailing" id="Uqu-34-iDv"/>
+                                                <constraint firstItem="u8i-xK-xxV" firstAttribute="top" secondItem="CJX-a6-fyC" secondAttribute="top" constant="9" id="jzu-SO-Cfm"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="96i-xu-UOQ"/>
+                                                    <exclude reference="NIB-h7-nHa"/>
+                                                    <exclude reference="Svm-UT-bnU"/>
+                                                    <exclude reference="Uqu-34-iDv"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.91303488470000005" blue="0.91379542030000005" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

@@ -13,6 +13,9 @@ class DataService {
     
     static let instance = DataService()
     
+    
+    // Gifts //
+    
     let GIFTS_KEY = "gifts"
     private var _loadedGifts = [Gift]()
     
@@ -57,6 +60,45 @@ class DataService {
         }
         NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "giftsLoaded", object: nil))
     }
+    
+    
+    // Memories //
+    
+    let MEMORIES_KEY = "memories"
+    private var _loadedMemories = [String]()
+    
+    var loadedMemories: [String] {
+        get {
+            return _loadedMemories
+        }
+        set {
+            _loadedMemories = newValue
+            self.saveMemories()
+        }
+    }
+    
+    func addMemory(memory: String) {
+        _loadedMemories.append(memory)
+        saveMemories()
+        loadMemories()
+    }
+    
+    func saveMemories() {
+        let memoriesData = NSKeyedArchiver.archivedDataWithRootObject(_loadedMemories)
+        NSUserDefaults.standardUserDefaults().setObject(memoriesData, forKey: MEMORIES_KEY)
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    func loadMemories() {
+        if let memoriesData = NSUserDefaults.standardUserDefaults().objectForKey(MEMORIES_KEY) as? NSData {
+            if let memoriesArray = NSKeyedUnarchiver.unarchiveObjectWithData(memoriesData) as? [String] {
+                _loadedMemories = memoriesArray
+            }
+        }
+    }
+    
+    
+    // File Manipulation Functions //
     
     func saveImageAndCreatePath(image: UIImage) -> String {
         let imgData = UIImageJPEGRepresentation(image, 0.7)

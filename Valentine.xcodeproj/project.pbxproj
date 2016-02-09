@@ -24,6 +24,7 @@
 		01E20D2B1C5BFDBA009BD168 /* yourman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E20D2A1C5BFDBA009BD168 /* yourman.mp3 */; };
 		01E20D2F1C5C058D009BD168 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E20D2E1C5C058D009BD168 /* SongCell.swift */; };
 		01E20D311C5E6F52009BD168 /* GiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E20D301C5E6F52009BD168 /* GiftCell.swift */; };
+		01F0BEAD1C6A7D73006CDE04 /* AddMemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F0BEAC1C6A7D73006CDE04 /* AddMemoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		01E20D2A1C5BFDBA009BD168 /* yourman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yourman.mp3; sourceTree = "<group>"; };
 		01E20D2E1C5C058D009BD168 /* SongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		01E20D301C5E6F52009BD168 /* GiftCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftCell.swift; sourceTree = "<group>"; };
+		01F0BEAC1C6A7D73006CDE04 /* AddMemoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				01E20D2E1C5C058D009BD168 /* SongCell.swift */,
 				01E20D301C5E6F52009BD168 /* GiftCell.swift */,
 				01A2AC351C603C1F0046A4B6 /* MemoryCell.swift */,
+				01F0BEAC1C6A7D73006CDE04 /* AddMemoryCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				01A2AC341C603AB40046A4B6 /* MemoriesVC.swift in Sources */,
 				01A2AC321C6025AA0046A4B6 /* GiftDetailVC.swift in Sources */,
 				01E20D141C59D7A6009BD168 /* GiftVC.swift in Sources */,
+				01F0BEAD1C6A7D73006CDE04 /* AddMemoryCell.swift in Sources */,
 				01A2AC361C603C1F0046A4B6 /* MemoryCell.swift in Sources */,
 				01E20D101C59D7A6009BD168 /* AppDelegate.swift in Sources */,
 				01E20D121C59D7A6009BD168 /* SongsVC.swift in Sources */,
