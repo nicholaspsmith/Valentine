@@ -37,6 +37,11 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             "name":"1 Coffee Date",
             "detail":"I will take you on a coffee date and not bring my iPhone, computer, or Apple Watch",
             "image":"coffee"
+        ],
+        [
+            "name":"$50 at Victoria's Secret",
+            "detail":"A $50.00 gift card to buy yourself something sexy ;)",
+            "image":"vs"
         ]
     ]
 
