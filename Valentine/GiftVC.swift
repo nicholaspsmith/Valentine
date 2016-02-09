@@ -40,8 +40,9 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         ],
         [
             "name":"$50 at Victoria's Secret",
-            "detail":"A $50.00 gift card to buy yourself something sexy ;)",
-            "image":"vs"
+            "detail":"A $50.00 gift card to buy yourself something sexy \n Card No: 6006496922255307065 \n PIN: 9729",
+            "image":"vsL",
+            "image2":"barcode"
         ]
     ]
 

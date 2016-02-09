@@ -13,6 +13,7 @@ class GiftDetailVC: UIViewController {
     var gift: [String:String]!
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var image2: UIImageView?
     @IBOutlet weak var giftName: UILabel!
     @IBOutlet weak var detail: UILabel!
     
@@ -27,6 +28,11 @@ class GiftDetailVC: UIViewController {
         giftName.text = gift["name"]
         detail.text = gift["detail"]
         imageView.image = UIImage(named: gift["image"]!)
+        if let im2 = gift["image2"] {
+            image2?.image = UIImage(named: im2)
+        } else {
+            image2?.image = nil
+        }
     }
 
     override func didReceiveMemoryWarning() {

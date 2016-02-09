@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -496,10 +496,10 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raybanLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dlf-Sz-vGf">
-                                <rect key="frame" x="0.0" y="50" width="600" height="162"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foot_massage" translatesAutoresizingMaskIntoConstraints="NO" id="dlf-Sz-vGf">
+                                <rect key="frame" x="0.0" y="50" width="600" height="190"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="162" id="pbh-S3-bgR"/>
+                                    <constraint firstAttribute="height" constant="190" id="pbh-S3-bgR"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gift Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXC-ED-fpV">
@@ -508,11 +508,20 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="barcode" translatesAutoresizingMaskIntoConstraints="NO" id="r0p-dE-eY6">
+                                <rect key="frame" x="134" y="406" width="373" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="IdI-F5-sEr"/>
+                                    <constraint firstAttribute="width" constant="175" id="XEj-Cd-O3X"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.91303488470000005" blue="0.91379542030000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="dlf-Sz-vGf" secondAttribute="trailing" id="0zz-KG-9Fh"/>
+                            <constraint firstItem="r0p-dE-eY6" firstAttribute="centerX" secondItem="HZW-Vy-OxA" secondAttribute="centerX" id="AbN-2a-R60"/>
                             <constraint firstAttribute="trailing" secondItem="FP4-YB-SKu" secondAttribute="trailing" id="Bii-3t-T8E"/>
+                            <constraint firstItem="RYQ-6j-Ijn" firstAttribute="top" secondItem="r0p-dE-eY6" secondAttribute="bottom" constant="20" id="FHH-E9-QkA"/>
                             <constraint firstItem="dlf-Sz-vGf" firstAttribute="leading" secondItem="HZW-Vy-OxA" secondAttribute="leading" id="UcD-Ea-4eA"/>
                             <constraint firstItem="FP4-YB-SKu" firstAttribute="top" secondItem="HZW-Vy-OxA" secondAttribute="top" id="VeY-39-Xkr"/>
                             <constraint firstItem="rXC-ED-fpV" firstAttribute="top" secondItem="dlf-Sz-vGf" secondAttribute="bottom" constant="30" id="Wxq-b7-Hqf"/>
@@ -521,6 +530,8 @@
                             <constraint firstItem="cwO-dh-grP" firstAttribute="top" secondItem="rXC-ED-fpV" secondAttribute="bottom" constant="26" id="hYg-Jv-Ywm"/>
                             <constraint firstItem="cwO-dh-grP" firstAttribute="centerX" secondItem="HZW-Vy-OxA" secondAttribute="centerX" id="kLD-Rx-WIo"/>
                             <constraint firstItem="FP4-YB-SKu" firstAttribute="leading" secondItem="HZW-Vy-OxA" secondAttribute="leading" id="nI7-9j-TY3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r0p-dE-eY6" secondAttribute="trailing" constant="50" id="tx9-WH-R1V"/>
+                            <constraint firstItem="r0p-dE-eY6" firstAttribute="leading" secondItem="HZW-Vy-OxA" secondAttribute="leadingMargin" constant="50" id="uEq-LM-04I"/>
                             <constraint firstItem="cwO-dh-grP" firstAttribute="top" secondItem="rXC-ED-fpV" secondAttribute="bottom" constant="26" id="zdj-Op-23J"/>
                             <constraint firstItem="rXC-ED-fpV" firstAttribute="centerX" secondItem="HZW-Vy-OxA" secondAttribute="centerX" id="zgR-rN-weP"/>
                         </constraints>
@@ -528,12 +539,15 @@
                             <mask key="constraints">
                                 <exclude reference="f3p-ih-IxY"/>
                                 <exclude reference="hYg-Jv-Ywm"/>
+                                <exclude reference="tx9-WH-R1V"/>
+                                <exclude reference="uEq-LM-04I"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="detail" destination="cwO-dh-grP" id="1bg-Aa-mMj"/>
                         <outlet property="giftName" destination="rXC-ED-fpV" id="8mP-1Y-Sar"/>
+                        <outlet property="image2" destination="r0p-dE-eY6" id="6SF-R8-E6G"/>
                         <outlet property="imageView" destination="dlf-Sz-vGf" id="8L8-f6-iKi"/>
                     </connections>
                 </viewController>
@@ -563,10 +577,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="barcode" width="167" height="80"/>
+        <image name="foot_massage" width="300" height="300"/>
         <image name="gift-7" width="29" height="30"/>
         <image name="heart-7" width="30" height="30"/>
         <image name="missdior" width="355" height="355"/>
         <image name="music-7" width="30" height="30"/>
-        <image name="raybanLogo" width="1768" height="1730"/>
     </resources>
 </document>
