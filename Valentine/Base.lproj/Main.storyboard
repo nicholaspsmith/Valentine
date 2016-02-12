@@ -296,7 +296,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8i-xK-xxV">
                                                     <rect key="frame" x="0.0" y="9" width="600" height="37"/>
-                                                    <color key="backgroundColor" red="0.33394803336703005" green="1" blue="0.5379218800630251" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                     <state key="normal" title="Add Memory">
                                                         <color key="titleColor" red="0.95064807920000005" green="1" blue="0.94668253440000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -314,7 +314,7 @@
                                                 <constraint firstItem="u8i-xK-xxV" firstAttribute="top" secondItem="CJX-a6-fyC" secondAttribute="topMargin" id="NIB-h7-nHa"/>
                                                 <constraint firstItem="u8i-xK-xxV" firstAttribute="leading" secondItem="CJX-a6-fyC" secondAttribute="leadingMargin" id="Svm-UT-bnU"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="u8i-xK-xxV" secondAttribute="trailing" id="Uqu-34-iDv"/>
-                                                <constraint firstItem="u8i-xK-xxV" firstAttribute="top" secondItem="CJX-a6-fyC" secondAttribute="top" constant="9" id="jzu-SO-Cfm"/>
+                                                <constraint firstItem="u8i-xK-xxV" firstAttribute="top" secondItem="CJX-a6-fyC" secondAttribute="top" id="jzu-SO-Cfm"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -410,7 +410,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zfu-Dq-Jkz">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zfu-Dq-Jkz">
                                 <rect key="frame" x="20" y="98" width="560" height="119"/>
                                 <color key="backgroundColor" red="0.95064807920000005" green="1" blue="0.94668253440000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -421,11 +421,11 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ci8-xS-EyQ">
                                 <rect key="frame" x="20" y="218" width="560" height="50"/>
-                                <color key="backgroundColor" red="0.33394803340000001" green="1" blue="0.53792188009999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="AAg-In-tRw"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Add">
                                     <color key="titleColor" red="0.95064807920000005" green="1" blue="0.94668253440000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -717,7 +717,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-254" y="-98"/>
+            <point key="canvasLocation" x="-294" y="-96"/>
         </scene>
     </scenes>
     <resources>
