@@ -58,6 +58,7 @@ class DataService {
                 _loadedGifts = giftsArray
             }
         }
+        
         NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "giftsLoaded", object: nil))
     }
     
@@ -95,6 +96,8 @@ class DataService {
                 _loadedMemories = memoriesArray
             }
         }
+        
+        NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "memoriesLoaded", object: nil))
     }
     
     

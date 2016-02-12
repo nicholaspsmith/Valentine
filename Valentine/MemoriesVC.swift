@@ -12,7 +12,7 @@ class MemoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var memories = [
+    var default_memories = [
         "Going to Enchanted Rock",
         "Going to New Orleans on a Whim",
         "Our first \"date\" to the Grocery Store",
@@ -31,15 +31,19 @@ class MemoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         tableView.delegate = self
         
+        DataService.instance.loadMemories()
+        
         if DataService.instance.loadedMemories.count == 0 {
             let current_date = NSDate()
             let feb_14 = NSDate(timeIntervalSince1970: 1455500164.46394)
             if current_date.compare(feb_14) == NSComparisonResult.OrderedAscending {
-                for var i = 0; i < memories.count; i++ {
-                    DataService.instance.addMemory(memories[i])
+                for var i = 0; i < default_memories.count; i++ {
+                    DataService.instance.addMemory(default_memories[i])
                 }
             }
         }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "onMemoriesLoaded:", name: "memoriesLoaded", object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,9 +53,10 @@ class MemoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        let memories = DataService.instance.loadedMemories
         
         if indexPath.row < memories.count {
-            let memory = DataService.instance.loadedMemories[indexPath.row]
+            let memory = memories[indexPath.row]
             if let cell = tableView.dequeueReusableCellWithIdentifier("MemoryCell") as? MemoryCell {
                 cell.configureCell(memory)
                 return cell
@@ -59,7 +64,6 @@ class MemoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 return UITableViewCell()
             }
         } else {
-            print(indexPath.row)
             if let cell = tableView.dequeueReusableCellWithIdentifier("AddMemoryCell") as? AddMemoryCell {
                 return cell
             } else {
@@ -78,6 +82,10 @@ class MemoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return memories.count + 1
+        return DataService.instance.loadedMemories.count + 1
+    }
+    
+    func onMemoriesLoaded(notif: AnyObject) {
+        tableView.reloadData()
     }
 }

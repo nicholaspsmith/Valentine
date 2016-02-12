@@ -10,6 +10,8 @@ import UIKit
 
 class AddMemoryVC: UIViewController {
 
+    @IBOutlet weak var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,5 +28,16 @@ class AddMemoryVC: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    @IBAction func addPushed(sender: AnyObject) {
+        if let text = textView.text {
+            if text.characters.count > 0 {
+                print("adding")
+                print(text)
+                DataService.instance.addMemory(text)
+                textView.text = ""
+                dismissViewControllerAnimated(true, completion: nil)
+            }
+        }
+    }
 
 }

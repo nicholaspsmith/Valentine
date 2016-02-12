@@ -410,14 +410,45 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zfu-Dq-Jkz">
+                                <rect key="frame" x="20" y="98" width="560" height="119"/>
+                                <color key="backgroundColor" red="0.95064807920000005" green="1" blue="0.94668253440000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="119" id="PXk-Mx-519"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ci8-xS-EyQ">
+                                <rect key="frame" x="20" y="218" width="560" height="50"/>
+                                <color key="backgroundColor" red="0.33394803340000001" green="1" blue="0.53792188009999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="AAg-In-tRw"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.95064807920000005" green="1" blue="0.94668253440000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPushed:" destination="Dy8-Xs-iSd" eventType="touchUpInside" id="ApZ-xw-Oo1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ci8-xS-EyQ" firstAttribute="top" secondItem="zfu-Dq-Jkz" secondAttribute="bottom" constant="1" id="0xb-r7-uXy"/>
+                            <constraint firstItem="zfu-Dq-Jkz" firstAttribute="top" secondItem="z7z-5t-8tb" secondAttribute="bottom" constant="45" id="29W-yF-wwG"/>
+                            <constraint firstItem="zfu-Dq-Jkz" firstAttribute="trailing" secondItem="0iV-T9-4pf" secondAttribute="trailingMargin" id="B5K-hY-BLg"/>
                             <constraint firstItem="z7z-5t-8tb" firstAttribute="leading" secondItem="0iV-T9-4pf" secondAttribute="leading" id="BGv-nO-GJr"/>
+                            <constraint firstItem="ci8-xS-EyQ" firstAttribute="trailing" secondItem="0iV-T9-4pf" secondAttribute="trailingMargin" id="KoI-bk-BXR"/>
                             <constraint firstAttribute="trailing" secondItem="z7z-5t-8tb" secondAttribute="trailing" id="P3R-IH-3mD"/>
+                            <constraint firstItem="zfu-Dq-Jkz" firstAttribute="leading" secondItem="0iV-T9-4pf" secondAttribute="leadingMargin" id="VJv-QI-b7y"/>
                             <constraint firstItem="z7z-5t-8tb" firstAttribute="top" secondItem="0iV-T9-4pf" secondAttribute="top" id="hDi-I0-bM1"/>
+                            <constraint firstItem="ci8-xS-EyQ" firstAttribute="leading" secondItem="0iV-T9-4pf" secondAttribute="leadingMargin" id="zCS-ol-jNs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="zfu-Dq-Jkz" id="W5f-Bf-hJh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wae-Aa-Axc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
