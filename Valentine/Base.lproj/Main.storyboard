@@ -301,6 +301,9 @@
                                                     <state key="normal" title="Add Memory">
                                                         <color key="titleColor" red="0.95064807920000005" green="1" blue="0.94668253440000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="Dy8-Xs-iSd" kind="show" id="S9O-IF-omL"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -346,6 +349,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zhw-KX-2l0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="363" y="679"/>
+        </scene>
+        <!--Add MemoryVC-->
+        <scene sceneID="6pD-LD-OCq">
+            <objects>
+                <viewController id="Dy8-Xs-iSd" customClass="AddMemoryVC" customModule="Valentine" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cnd-08-2vU"/>
+                        <viewControllerLayoutGuide type="bottom" id="kSC-4z-lrr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0iV-T9-4pf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z7z-5t-8tb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="53"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New Memory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hz-6h-r32">
+                                        <rect key="frame" x="8" y="23" width="584" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="171" id="ro5-Mt-4xa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="ro5-Mt-4xa"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lps-U9-EQp">
+                                        <rect key="frame" x="6" y="23" width="61" height="30"/>
+                                        <state key="normal" title="&lt; Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelPressed:" destination="Dy8-Xs-iSd" eventType="touchUpInside" id="7vq-g3-G64"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="A97-Ju-Q0U"/>
+                                    <constraint firstItem="6hz-6h-r32" firstAttribute="centerX" secondItem="z7z-5t-8tb" secondAttribute="centerX" id="AP6-yK-vaG"/>
+                                    <constraint firstAttribute="bottom" secondItem="6hz-6h-r32" secondAttribute="bottom" constant="5" id="OuN-rT-U1j"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="PQU-ZS-Jy6"/>
+                                    <constraint firstAttribute="height" constant="50" id="Yzk-BT-vRf"/>
+                                    <constraint firstItem="6hz-6h-r32" firstAttribute="top" secondItem="z7z-5t-8tb" secondAttribute="top" constant="15" id="axH-SI-Cbv"/>
+                                    <constraint firstItem="6hz-6h-r32" firstAttribute="bottom" secondItem="Lps-U9-EQp" secondAttribute="bottom" id="sQf-tf-U5i"/>
+                                    <constraint firstItem="6hz-6h-r32" firstAttribute="leading" secondItem="z7z-5t-8tb" secondAttribute="leading" constant="8" id="vr8-5p-o4r"/>
+                                    <constraint firstItem="6hz-6h-r32" firstAttribute="centerY" secondItem="z7z-5t-8tb" secondAttribute="centerY" id="wBG-kI-zP8"/>
+                                    <constraint firstAttribute="trailing" secondItem="6hz-6h-r32" secondAttribute="trailing" constant="8" id="y4l-Vi-dwL"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="A97-Ju-Q0U"/>
+                                        <exclude reference="axH-SI-Cbv"/>
+                                        <exclude reference="wBG-kI-zP8"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z7z-5t-8tb" firstAttribute="leading" secondItem="0iV-T9-4pf" secondAttribute="leading" id="BGv-nO-GJr"/>
+                            <constraint firstAttribute="trailing" secondItem="z7z-5t-8tb" secondAttribute="trailing" id="P3R-IH-3mD"/>
+                            <constraint firstItem="z7z-5t-8tb" firstAttribute="top" secondItem="0iV-T9-4pf" secondAttribute="top" id="hDi-I0-bM1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wae-Aa-Axc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031" y="679"/>
         </scene>
         <!--Gifts-->
         <scene sceneID="wg7-f3-ORb">
