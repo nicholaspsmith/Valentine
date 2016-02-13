@@ -15,7 +15,7 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     var gifts: [[String:String]] = [
         [
             "name":"1 Pair of Ray Bans",
-            "detail":"I will buy you any pair of Ray Bans that you like",
+            "detail":"I will take you to the sunglasses store and buy you any pair of Ray Bans that you like",
             "image":"raybans"
         ],
         [

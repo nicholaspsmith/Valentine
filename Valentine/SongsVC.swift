@@ -21,7 +21,8 @@ class SongsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         ["name":"Cruise","artist":"Florida Georgia Line","filename":"cruise"],
         ["name":"You and I","artist":"Ingrid Michaelson","filename":"youandi"],
         ["name":"Anywhere With You","artist":"Josh Owen","filename":"anywherewithyou"],
-        ["name":"Your Man","artist":"Josh Turner","filename":"yourman"]
+        ["name":"Your Man","artist":"Josh Turner","filename":"yourman"],
+        ["name":"Get Your Shine On","artist":"Florida Georgia Line","filename":"getyourshineon"]
     ]
 
     override func viewDidLoad() {

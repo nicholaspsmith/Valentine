@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		013679B91C60441700243B83 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013679B81C60441700243B83 /* DataService.swift */; };
 		013679BC1C60447200243B83 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013679BB1C60447200243B83 /* Gift.swift */; };
+		015CA1B01C6F121F00670E92 /* getyourshineon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 015CA1AF1C6F121F00670E92 /* getyourshineon.mp3 */; };
 		01A2AC321C6025AA0046A4B6 /* GiftDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A2AC311C6025AA0046A4B6 /* GiftDetailVC.swift */; };
 		01A2AC341C603AB40046A4B6 /* MemoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A2AC331C603AB40046A4B6 /* MemoriesVC.swift */; };
 		01A2AC361C603C1F0046A4B6 /* MemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A2AC351C603C1F0046A4B6 /* MemoryCell.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		013679B81C60441700243B83 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		013679BB1C60447200243B83 /* Gift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
+		015CA1AF1C6F121F00670E92 /* getyourshineon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = getyourshineon.mp3; sourceTree = "<group>"; };
 		01A2AC311C6025AA0046A4B6 /* GiftDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftDetailVC.swift; sourceTree = "<group>"; };
 		01A2AC331C603AB40046A4B6 /* MemoriesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesVC.swift; sourceTree = "<group>"; };
 		01A2AC351C603C1F0046A4B6 /* MemoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCell.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				01E20D241C5BF799009BD168 /* cruise.mp3 */,
 				01E20D281C5BFCE2009BD168 /* anywherewithyou.mp3 */,
 				01E20D2A1C5BFDBA009BD168 /* yourman.mp3 */,
+				015CA1AF1C6F121F00670E92 /* getyourshineon.mp3 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01E20D1C1C59D7A6009BD168 /* LaunchScreen.storyboard in Resources */,
+				015CA1B01C6F121F00670E92 /* getyourshineon.mp3 in Resources */,
 				01E20D2B1C5BFDBA009BD168 /* yourman.mp3 in Resources */,
 				01E20D291C5BFCE2009BD168 /* anywherewithyou.mp3 in Resources */,
 				01E20D271C5BFC46009BD168 /* youandi.mp3 in Resources */,

@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="faraway" translatesAutoresizingMaskIntoConstraints="NO" id="EYk-Zz-YZI">
+                                <rect key="frame" x="0.0" y="55" width="600" height="496"/>
+                            </imageView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOG-fP-zZp">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="53"/>
                                 <subviews>
@@ -48,7 +51,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snv-Fr-d5A">
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snv-Fr-d5A">
                                 <rect key="frame" x="0.0" y="431" width="600" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your Man - Josh Turner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuG-eY-QE8">
@@ -111,15 +114,15 @@
                                     <constraint firstAttribute="height" constant="120" id="vET-Cr-24x"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kbp-HM-PGY">
-                                <rect key="frame" x="0.0" y="221" width="600" height="202"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kbp-HM-PGY">
+                                <rect key="frame" x="0.0" y="55" width="600" height="375"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.40000000000000002" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="68" id="MSE-z7-3ey" customClass="SongCell" customModule="Valentine" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="68"/>
+                                    <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.40000000000000002" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="59" id="MSE-z7-3ey" customClass="SongCell" customModule="Valentine" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MSE-z7-3ey" id="4V6-nh-Uu8">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="67"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="58"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPQ-LO-WDm">
@@ -128,7 +131,7 @@
                                                         <constraint firstAttribute="width" constant="494" id="BDo-fh-abB"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="IowanOldStyle-Bold" family="Iowan Old Style" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="1" green="0.2887185048" blue="0.380406091" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -172,7 +175,7 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="1" alpha="0.66424725506756754" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="artistLbl" destination="Kcs-Bi-V02" id="Ul8-f4-d2w"/>
                                             <outlet property="titleLbl" destination="qPQ-LO-WDm" id="NFN-fM-TsF"/>
@@ -180,25 +183,32 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="smile_sunglasses" translatesAutoresizingMaskIntoConstraints="NO" id="EYk-Zz-YZI">
-                                <rect key="frame" x="0.0" y="52" width="600" height="161"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="snv-Fr-d5A" secondAttribute="trailing" constant="-20" id="0yN-zw-gcL"/>
-                            <constraint firstItem="Kbp-HM-PGY" firstAttribute="top" secondItem="EOG-fP-zZp" secondAttribute="bottom" constant="8" id="AKt-UK-EEa"/>
+                            <constraint firstItem="EYk-Zz-YZI" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="7pl-iK-ENV"/>
+                            <constraint firstItem="Kbp-HM-PGY" firstAttribute="top" secondItem="EOG-fP-zZp" secondAttribute="bottom" id="AKt-UK-EEa"/>
                             <constraint firstItem="EOG-fP-zZp" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="Dqz-Q4-8uU"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="snv-Fr-d5A" secondAttribute="bottom" id="OvO-W7-06E"/>
+                            <constraint firstAttribute="trailing" secondItem="EYk-Zz-YZI" secondAttribute="trailing" id="QfG-44-VkD"/>
                             <constraint firstItem="EOG-fP-zZp" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="VSD-5N-WLa"/>
                             <constraint firstItem="Kbp-HM-PGY" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="XAZ-7C-Wmg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kbp-HM-PGY" secondAttribute="trailing" id="cNI-zq-ndo"/>
                             <constraint firstItem="snv-Fr-d5A" firstAttribute="top" secondItem="Kbp-HM-PGY" secondAttribute="bottom" id="jGg-GE-JKx"/>
                             <constraint firstAttribute="trailing" secondItem="EOG-fP-zZp" secondAttribute="trailing" id="jue-P4-lTc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kbp-HM-PGY" secondAttribute="trailing" constant="-20" id="nSm-HZ-cnD"/>
+                            <constraint firstItem="EYk-Zz-YZI" firstAttribute="top" secondItem="EOG-fP-zZp" secondAttribute="bottom" id="tPK-xY-IRk"/>
                             <constraint firstItem="snv-Fr-d5A" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="vAr-KE-lL1"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="EYk-Zz-YZI" secondAttribute="bottom" id="yDV-gU-9Qs"/>
                             <constraint firstItem="Kbp-HM-PGY" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="z04-XS-hyL"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cNI-zq-ndo"/>
+                                <exclude reference="z04-XS-hyL"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Our Songs" image="music-7" id="acW-dT-cKf"/>
                     <connections>
@@ -725,11 +735,11 @@
     </scenes>
     <resources>
         <image name="barcode" width="167" height="80"/>
+        <image name="faraway" width="479" height="705"/>
         <image name="foot_massage" width="300" height="300"/>
         <image name="gift-7" width="29" height="30"/>
         <image name="heart-7" width="30" height="30"/>
         <image name="missdior" width="355" height="355"/>
         <image name="music-7" width="30" height="30"/>
-        <image name="smile_sunglasses" width="960" height="960"/>
     </resources>
 </document>
