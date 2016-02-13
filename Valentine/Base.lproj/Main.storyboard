@@ -275,7 +275,7 @@
                                 <rect key="frame" x="0.0" y="55" width="600" height="496"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemoryCell" rowHeight="68" id="dZN-B1-0B5" customClass="MemoryCell" customModule="Valentine" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemoryCell" rowHeight="68" id="dZN-B1-0B5" customClass="MemoryCell" customModule="Valentine" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dZN-B1-0B5" id="U9f-1q-IZX">
@@ -392,7 +392,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lps-U9-EQp">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lps-U9-EQp">
                                         <rect key="frame" x="6" y="23" width="61" height="30"/>
                                         <state key="normal" title="&lt; Cancel">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -408,6 +408,7 @@
                                     <constraint firstItem="6hz-6h-r32" firstAttribute="centerX" secondItem="z7z-5t-8tb" secondAttribute="centerX" id="AP6-yK-vaG"/>
                                     <constraint firstAttribute="bottom" secondItem="6hz-6h-r32" secondAttribute="bottom" constant="5" id="OuN-rT-U1j"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="PQU-ZS-Jy6"/>
+                                    <constraint firstItem="Lps-U9-EQp" firstAttribute="leading" secondItem="z7z-5t-8tb" secondAttribute="leading" constant="8" id="S73-jn-T43"/>
                                     <constraint firstAttribute="height" constant="50" id="Yzk-BT-vRf"/>
                                     <constraint firstItem="6hz-6h-r32" firstAttribute="top" secondItem="z7z-5t-8tb" secondAttribute="top" constant="15" id="axH-SI-Cbv"/>
                                     <constraint firstItem="6hz-6h-r32" firstAttribute="bottom" secondItem="Lps-U9-EQp" secondAttribute="bottom" id="sQf-tf-U5i"/>

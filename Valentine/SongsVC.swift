@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class SongsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SongsVC: UIViewController, UITableViewDataSource, UITableViewDelegate, AVAudioPlayerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var currentSongLbl: UILabel!
@@ -22,7 +22,9 @@ class SongsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         ["name":"You and I","artist":"Ingrid Michaelson","filename":"youandi"],
         ["name":"Anywhere With You","artist":"Josh Owen","filename":"anywherewithyou"],
         ["name":"Your Man","artist":"Josh Turner","filename":"yourman"],
-        ["name":"Get Your Shine On","artist":"Florida Georgia Line","filename":"getyourshineon"]
+        ["name":"Get Your Shine On","artist":"Florida Georgia Line","filename":"getyourshineon"],
+        ["name":"Going to the Chapel","artist":"The Dixie Cups","filename":"chapel"],
+        ["name":"When I'm 64","artist":"The Beatles","filename":"64"]
     ]
 
     override func viewDidLoad() {
@@ -70,8 +72,9 @@ class SongsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         do {
             musicPlayer = try AVAudioPlayer(contentsOfURL: NSURL(string: path)!)
+            musicPlayer.delegate = self
             musicPlayer.prepareToPlay()
-            musicPlayer.numberOfLoops = 1
+            musicPlayer.numberOfLoops = 0
             musicPlayer.play()
             currentSongLbl.text = songs[songCounter]["name"]!
             currentArtistLbl.text = songs[songCounter]["artist"]!
@@ -107,5 +110,10 @@ class SongsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             musicPlayer.play()
         }
     }
+    
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+        nextPressed(self)
+    }
+    
 }
 
