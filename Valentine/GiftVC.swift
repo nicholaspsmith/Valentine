@@ -68,12 +68,12 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(animated: Bool) {
+        collection.reloadData()
     }
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(DataService.instance.loadedGifts.count)
         return DataService.instance.loadedGifts.count
     }
     
@@ -93,7 +93,10 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let gift = gifts[indexPath.row]
+        print(indexPath.row)
+        let gift = DataService.instance.loadedGifts[indexPath.row]
+        
+        // Sender needs to be type [String:String]
         performSegueWithIdentifier("GiftDetailVC", sender: gift)
     }
     

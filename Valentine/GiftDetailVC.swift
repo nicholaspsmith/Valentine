@@ -21,6 +21,8 @@ class GiftDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(gift)
+        
         let tap = UITapGestureRecognizer(target: self, action: "tripleTapped")
         tap.numberOfTapsRequired = 3
         view.addGestureRecognizer(tap)
@@ -52,6 +54,8 @@ class GiftDetailVC: UIViewController {
             let name = gifts[i].giftName
             if name != self.gift["name"] {
                 newGifts.append(gifts[i])
+            } else {
+                print(gifts[i].giftName)
             }
         }
         DataService.instance.loadedGifts = newGifts
