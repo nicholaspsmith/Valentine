@@ -52,8 +52,6 @@ class GiftDetailVC: UIViewController {
             let name = gifts[i].giftName
             if name != self.gift.giftName {
                 newGifts.append(gifts[i])
-            } else {
-                print(gifts[i].giftName)
             }
         }
         DataService.instance.loadedGifts = newGifts
