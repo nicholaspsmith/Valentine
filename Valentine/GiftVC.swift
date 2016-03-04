@@ -56,21 +56,21 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "onGiftsLoaded:", name: "giftsLoaded", object: nil)
         
         if DataService.instance.loadedGifts.count == 0 {
-//            let current_date = NSDate()
-//            let feb_14 = NSDate(timeIntervalSince1970: 1455500164.46394)
-//            if current_date.compare(feb_14) == NSComparisonResult.OrderedAscending {
+            let current_date = NSDate()
+            let mar_5 = NSDate(timeIntervalSince1970: 1457200164.46394)
+            if current_date.compare(mar_5) == NSComparisonResult.OrderedAscending {
                 for var i = 0; i < gifts.count; i++ {
-                    if let img2exists = gifts[i]["image2"] {
-                        print("Setting image2 for \(gifts[i]["name"]) as \(gifts[i]["image2"]!)")
-                        let gift = Gift(imagePath: gifts[i]["image"]!, giftName: gifts[i]["name"]!, giftDesc: gifts[i]["detail"]!, im2p: gifts[i]["image2"]!)
+                    if let im2path = gifts[i]["image2"] {
+                        let gift = Gift(imagePath: gifts[i]["image"]!, giftName: gifts[i]["name"]!, giftDesc: gifts[i]["detail"]!, im2p: im2path)
                         DataService.instance.addGift(gift)
                     } else {
                         let gift = Gift(imagePath: gifts[i]["image"]!, giftName: gifts[i]["name"]!, giftDesc: gifts[i]["detail"]!)
                         DataService.instance.addGift(gift)
                     }
+                    
                 }
                 
-//            }
+            }
         }
     }
 
@@ -99,7 +99,6 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let gift = DataService.instance.loadedGifts[indexPath.row]
-        print("Selected a gift: \(gift.giftName) which has img2: \(gift.image2Path)")
         performSegueWithIdentifier("GiftDetailVC", sender: gift)
     }
     

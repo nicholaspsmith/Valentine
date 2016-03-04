@@ -28,9 +28,10 @@ class GiftDetailVC: UIViewController {
         giftName.text = gift.giftName
         detail.text = gift.giftDesc
         imageView.image = UIImage(named: gift.imagePath)
-        if giftName.text == "$50 at Victoria's Secret" {
-            image2?.image = UIImage(named: "barcode")
+        if let _ = gift.image2Path {
+            image2?.image = UIImage(named: gift.image2Path!)
         }
+
     }
 
     override func didReceiveMemoryWarning() {
