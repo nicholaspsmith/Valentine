@@ -94,7 +94,6 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        print(indexPath.row)
         let gift = DataService.instance.loadedGifts[indexPath.row]
         
         performSegueWithIdentifier("GiftDetailVC", sender: gift)
