@@ -45,7 +45,6 @@ class GiftDetailVC: UIViewController {
     }
  
     func tripleTapped() {
-        // @TODO remove this gift from DataSource
         let gifts = DataService.instance.loadedGifts
         var newGifts = [Gift]()
         for var i = 0; i < gifts.count; i++ {
