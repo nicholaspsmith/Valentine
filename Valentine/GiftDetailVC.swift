@@ -21,8 +21,6 @@ class GiftDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(gift)
-        
         let tap = UITapGestureRecognizer(target: self, action: "tripleTapped")
         tap.numberOfTapsRequired = 3
         view.addGestureRecognizer(tap)
