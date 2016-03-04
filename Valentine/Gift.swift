@@ -14,9 +14,14 @@ class Gift: NSObject, NSCoding {
     private var _giftDesc: String!
     private var _imagePath: String!
     private var _used: Bool!
+    private var _image2Path: String?
     
     var imagePath: String {
         return _imagePath
+    }
+    
+    var image2Path: String? {
+        return _image2Path
     }
     
     var giftName: String {
@@ -36,7 +41,7 @@ class Gift: NSObject, NSCoding {
         }
     }
     
-    init(imagePath: String, giftName: String, giftDesc: String) {
+    init(imagePath: String, giftName: String, giftDesc: String, image2Path: String?) {
         self._imagePath = imagePath
         self._giftName = giftName
         self._giftDesc = giftDesc

@@ -10,7 +10,7 @@ import UIKit
 
 class GiftDetailVC: UIViewController {
 
-    var gift: [String:String]!
+    var gift: Gift!
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var image2: UIImageView?
@@ -27,10 +27,10 @@ class GiftDetailVC: UIViewController {
         tap.numberOfTapsRequired = 3
         view.addGestureRecognizer(tap)
         
-        giftName.text = gift["name"]
-        detail.text = gift["detail"]
-        imageView.image = UIImage(named: gift["image"]!)
-        if let im2 = gift["image2"] {
+        giftName.text = gift.giftName
+        detail.text = gift.giftDesc
+        imageView.image = UIImage(named: gift.imagePath)
+        if let im2 = gift.image2Path {
             image2?.image = UIImage(named: im2)
         } else {
             image2?.image = nil
@@ -52,7 +52,7 @@ class GiftDetailVC: UIViewController {
         var newGifts = [Gift]()
         for var i = 0; i < gifts.count; i++ {
             let name = gifts[i].giftName
-            if name != self.gift["name"] {
+            if name != self.gift.giftName {
                 newGifts.append(gifts[i])
             } else {
                 print(gifts[i].giftName)

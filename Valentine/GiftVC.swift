@@ -60,7 +60,8 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             let feb_14 = NSDate(timeIntervalSince1970: 1455500164.46394)
             if current_date.compare(feb_14) == NSComparisonResult.OrderedAscending {
                 for var i = 0; i < gifts.count; i++ {
-                    let gift = Gift(imagePath: gifts[i]["image"]!, giftName: gifts[i]["name"]!, giftDesc: gifts[i]["detail"]!)
+                    
+                    let gift = Gift(imagePath: gifts[i]["image"]!, giftName: gifts[i]["name"]!, giftDesc: gifts[i]["detail"]!, image2Path: gifts[i]["image2"])
                     DataService.instance.addGift(gift)
                 }
                 
@@ -96,14 +97,13 @@ class GiftVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         print(indexPath.row)
         let gift = DataService.instance.loadedGifts[indexPath.row]
         
-        // Sender needs to be type [String:String]
         performSegueWithIdentifier("GiftDetailVC", sender: gift)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "GiftDetailVC" {
             if let detailsVC = segue.destinationViewController as? GiftDetailVC {
-                if let gift = sender as? [String:String] {
+                if let gift = sender as? Gift {
                     detailsVC.gift = gift
                 }
             }
