@@ -666,7 +666,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="barcode" translatesAutoresizingMaskIntoConstraints="NO" id="r0p-dE-eY6">
+                            <imageView autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r0p-dE-eY6">
                                 <rect key="frame" x="134" y="406" width="373" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="IdI-F5-sEr"/>
@@ -735,7 +735,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="barcode" width="167" height="80"/>
         <image name="faraway" width="479" height="705"/>
         <image name="foot_massage" width="300" height="300"/>
         <image name="gift-7" width="29" height="30"/>

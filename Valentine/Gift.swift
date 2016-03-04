@@ -41,10 +41,16 @@ class Gift: NSObject, NSCoding {
         }
     }
     
-    init(imagePath: String, giftName: String, giftDesc: String, image2Path: String?) {
+    init(imagePath: String, giftName: String, giftDesc: String, im2p: String = "") {
+        super.init()
+        
         self._imagePath = imagePath
         self._giftName = giftName
         self._giftDesc = giftDesc
+        if image2Path != "" {
+            print("Creating new gift called \(self._giftName) has im2 \(self._image2Path)")
+            self._image2Path = image2Path
+        }
     }
     
     override init() {}

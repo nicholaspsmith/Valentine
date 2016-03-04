@@ -28,16 +28,13 @@ class GiftDetailVC: UIViewController {
         giftName.text = gift.giftName
         detail.text = gift.giftDesc
         imageView.image = UIImage(named: gift.imagePath)
-        if let im2 = gift.image2Path {
-            image2?.image = UIImage(named: im2)
-        } else {
-            image2?.image = nil
+        if giftName.text == "$50 at Victoria's Secret" {
+            image2?.image = UIImage(named: "barcode")
         }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func cancelPressed(sender: AnyObject) {
